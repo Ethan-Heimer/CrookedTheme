@@ -32,7 +32,7 @@ function open_window()
 
   -- and finally create it with buffer attached
   win = api.nvim_open_win(buf, true, opts)
-  api.nvim_buf_set_lines(buf, 0, -1, false, { center('8====D (.)(.) 8====D'), '', ''})
+  api.nvim_buf_set_lines(buf, 0, -1, false, {'8====D (.)(.) 8====D', '', ''})
 end
 
 return {
