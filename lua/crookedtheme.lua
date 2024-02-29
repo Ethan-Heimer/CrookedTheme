@@ -1,3 +1,5 @@
+print("Hello World")
+
 local api = vim.api
 local buf, win
 
