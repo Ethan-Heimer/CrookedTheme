@@ -1,7 +1,7 @@
 function test()
-    print("Config")
+    print("Test")
 end
 
-return {
+return{
     test = test
 }
