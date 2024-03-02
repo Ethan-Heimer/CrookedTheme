@@ -1,7 +1,6 @@
-function test()
-    print("Test")
-end
+print("soed")
 
-return{
-    test = test
-}
+config = {}
+config.test = "Hello"
+
+return config
