@@ -15,4 +15,5 @@ config.keywordColor = "#F343D3"
 config.builtinFunctionColor = "#F30099"
 config.operatorColor = "#334455"
 config.variableColor = "#00FFD3"
+config.specialTextColor = "#447788"
 return config
