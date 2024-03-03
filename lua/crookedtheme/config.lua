@@ -11,6 +11,6 @@ config.moduleColor = "#FF99CC"
 config.macroColor = "#CCDDAA"
 config.typeColor = "#FF0033"
 config.textColor = "#FF3399"
-config.keywordColor = "F343D3"
+config.keywordColor = "#F343D3"
 
 return config
