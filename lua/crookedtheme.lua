@@ -17,6 +17,7 @@ vim.api.nvim_set_hl(0, "@include", {fg = config.moduleColor})
 vim.api.nvim_set_hl(0, "@type", {fg = config.typeColor})
 vim.api.nvim_set_hl(0, "@macro", {fg = config.macroColor})
 vim.api.nvim_set_hl(0, "@property", {fg = config.fieldColor})
+vim.api.nvim_set_hl(0, "Constant", {fg = config.constantColor})
 
 vim.api.nvim_set_hl(0, "@text", {fg = config.textColor})
 vim.api.nvim_set_hl(0, "Identifier", {link = "@text"})
