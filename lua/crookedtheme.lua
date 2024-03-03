@@ -29,6 +29,16 @@ vim.api.nvim_set_hl(0, "@keyword.debug", {link = "@keyword"})
 
 vim.api.nvim_set_hl(0, "@operator", {fg = config.operatorColor})
 vim.api.nvim_set_hl(0, "@keyword.operator", {link = "@operator"})
+
+vim.api.nvim_set_hl(0, "@variable", {fg = config.variableColor})
+
+
+
 function test()
     bool = true;
+
+    a = 10
+    b = 10
+
+    c = a + b;
 end
