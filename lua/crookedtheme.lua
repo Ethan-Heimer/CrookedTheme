@@ -30,6 +30,8 @@ vim.api.nvim_set_hl(0, "@comment.error", {fg = config.commentErrorColor})
 vim.api.nvim_set_hl(0, "@comment.todo", {fg = config.commentTodoColor})
 vim.api.nvim_set_hl(0, "@comment.note", {fg = config.commentNoteColor})
 
+vim.api.nvim_set_hl(0, "@character", {fg = config.characterColor})
+
 vim.api.nvim_set_hl(0, "@keyword", {fg = config.keywordColor, bold = true, italic = true})
 vim.api.nvim_set_hl(0, "@keyword.return", {link = "@keyword"})
 vim.api.nvim_set_hl(0, "@keyword.import", {link = "@keyword"})

@@ -21,5 +21,6 @@ config.commentWarningColor = "#667709"
 config.commentTodoColor = "#DD5577"
 config.commentErrorColor = "#556883"
 config.commentNoteColor = "#123456"
+config.characterColor = "#485760"
 
 return config
