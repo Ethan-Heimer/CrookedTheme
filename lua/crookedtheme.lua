@@ -2,8 +2,11 @@
 local config = require("crookedtheme.config")
 print(config.test)
 
-vim.api.nvim_set_hl(0, "@function", {fg = config.functionColor})
-vim.api.nvim_set_hl(0, "@method", {fg = config.functionColor})
+vim.api.nvim_set_hl(0, "@function", {fg = config.functionColor, bold = true})
+vim.api.nvim_set_hl(0, "@function.method", {link = "@function"})
+vim.api.nvim_set_hl(0, "@method", {link = "@function"})
+vim.api.nvim_set_hl(0, "@function.builtin", {fg = config.builtinFunctionColor})
+
 vim.api.nvim_set_hl(0, "@string", {fg = config.stringColor})
 vim.api.nvim_set_hl(0, "@boolean", {fg = config.booleanColor})
 vim.api.nvim_set_hl(0, "@attribute.diff", {fg = config.attributeColor})
@@ -17,10 +20,8 @@ vim.api.nvim_set_hl(0, "@property", {fg = config.fieldColor})
 vim.api.nvim_set_hl(0, "@text", {fg = config.textColor})
 
 vim.api.nvim_set_hl(0, "@keyword", {fg = config.keywordColor})
+vim.api.nvim_set_hl(0, "@keyword.return", {fg = config.keywordColor})
 
 function test()
     bool = true;
 end
-
-
-
