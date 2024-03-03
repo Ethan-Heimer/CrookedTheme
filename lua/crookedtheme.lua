@@ -1,6 +1,14 @@
 --:Telescope highlights
 local config = require("crookedtheme.config")
-config.test()
+print(config.test)
 
-vim.api.nvim_set_hl(0, "@Function", {fg = "#FFFF00"})
+vim.api.nvim_set_hl(0, "@method", {fg = config.functionColor})
+vim.api.nvim_set_hl(0, "@string", {fg = config.stringColor})
+vim.api.nvim_set_hl(0, "@boolean", {fg = config.booleanColor})
+
+function test()
+    bool = true;
+end
+
+
 
