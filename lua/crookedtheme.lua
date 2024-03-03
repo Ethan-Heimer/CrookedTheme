@@ -20,6 +20,15 @@ vim.api.nvim_set_hl(0, "@property", {fg = config.fieldColor})
 
 vim.api.nvim_set_hl(0, "@text", {fg = config.textColor})
 vim.api.nvim_set_hl(0, "Identifier", {link = "@text"})
+vim.api.nvim_set_hl(0, "@text.uri", {fg = config.specialTextColor})
+vim.api.nvim_set_hl(0, "Special", {fg = config.specialTextColor})
+vim.api.nvim_set_hl(0, "@text.title", {fg = config.specialTextColor, bold = true})
+
+vim.api.nvim_set_hl(0, "@comment", {fg = config.commentColor})
+vim.api.nvim_set_hl(0, "@comment.warning", {fg = config.commentWarningColor})
+vim.api.nvim_set_hl(0, "@comment.error", {fg = config.commentErrorColor})
+vim.api.nvim_set_hl(0, "@comment.todo", {fg = config.commentTodoColor})
+vim.api.nvim_set_hl(0, "@comment.note", {fg = config.commentNoteColor})
 
 vim.api.nvim_set_hl(0, "@keyword", {fg = config.keywordColor, bold = true, italic = true})
 vim.api.nvim_set_hl(0, "@keyword.return", {link = "@keyword"})

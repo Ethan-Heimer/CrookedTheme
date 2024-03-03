@@ -16,4 +16,10 @@ config.builtinFunctionColor = "#F30099"
 config.operatorColor = "#334455"
 config.variableColor = "#00FFD3"
 config.specialTextColor = "#447788"
+config.commentColor = "#889922"
+config.commentWarningColor = "#667709"
+config.commentTodoColor = "#DD5577"
+config.commentErrorColor = "#556883"
+config.commentNoteColor = "#123456"
+
 return config
