@@ -9,6 +9,6 @@ config.conditionalColor = "#9900AA"
 config.fieldColor = "#BBDD90" 
 config.moduleColor = "#FF99CC"
 config.macroColor = "#CCDDAA"
-connfig.typeColor = "#FF0033"
+config.typeColor = "#FF0033"
 
 return config
