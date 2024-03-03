@@ -27,6 +27,8 @@ vim.api.nvim_set_hl(0, "@keyword.return", {link = "@keyword"})
 vim.api.nvim_set_hl(0, "@keyword.storage", {link = "@keyword"})
 vim.api.nvim_set_hl(0, "@keyword.debug", {link = "@keyword"})
 
+vim.api.nvim_set_hl(0, "@operator", {fg = config.operatorColor})
+vim.api.nvim_set_hl(0, "@keyword.operator", {link = "@operator"})
 function test()
     bool = true;
 end
