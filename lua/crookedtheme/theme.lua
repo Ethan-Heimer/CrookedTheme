@@ -1,5 +1,5 @@
 --:Telescope highlights
-local config = require("crookedtheme.config")
+local config = require("config")
 
 function Apply()
     vim.api.nvim_set_hl(0, "Function", config.functionColor)
