@@ -23,5 +23,7 @@ config.commentErrorColor = "#556883"
 config.commentNoteColor = "#123456"
 config.characterColor = "#485760"
 config.constantColor = "#DDDD55"
+config.netrwDirectoryColor = "#324272"
+config.netrwPlainColor = "#216191"
 
 return config
