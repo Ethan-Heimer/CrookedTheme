@@ -25,5 +25,5 @@ config.characterColor = "#485760"
 config.constantColor = "#DDDD55"
 config.netrwDirectoryColor = "#324272"
 config.netrwPlainColor = "#216191"
-
+config.symbolColor = "#45FF00"
 return config

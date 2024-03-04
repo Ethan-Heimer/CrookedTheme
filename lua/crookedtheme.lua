@@ -59,6 +59,15 @@ vim.api.nvim_set_hl(0, "@keyword.operator", {link = "@operator"})
 vim.api.nvim_set_hl(0, "@variable", {fg = config.variableColor})
 vim.api.nvim_set_hl(0, "PreProc", {fg = config.macroColor})
 
+vim.api.nvim_set_hl(0, "netrwDir", {fg = config.netrwDirectoryColor})
+vim.api.nvim_set_hl(0, "netrwPlain", {fg = config.netrwPlainColor})
+vim.api.nvim_set_hl(0, "Delimiter", {fg = config.netrwPlainColor})
+:q
+:q
+:w
+
+
+
 
 function test()
     bool = true;
