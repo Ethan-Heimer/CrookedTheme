@@ -26,5 +26,6 @@ config.constantColor = {fg = "#FFFFFF"}
 config.netrwDirectoryColor = {fg = "#FFFFFF"}
 config.netrwPlainColor = {fg = "#FFFFFF"}
 config.symbolColor = {fg = "#FFFFFF"}
+config.normalColor = {bg = "#000000"}
 
 return config

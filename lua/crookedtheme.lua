@@ -62,7 +62,7 @@ vim.api.nvim_set_hl(0, "netrwDir", config.netrwDirectoryColor)
 vim.api.nvim_set_hl(0, "netrwPlain", config.netrwPlainColor)
 vim.api.nvim_set_hl(0, "Delimiter", config.symbolColor)
 
-
+vim.api.nvim_set_hl(0, "Normal", config.normalColor)
 
 function test()
     bool = true;
