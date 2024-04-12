@@ -1,4 +1,4 @@
-config = {}
+local config = {}
 
 config.attributeColor = {fg = "#FFFFFF"}
 config.booleanColor = {fg = "#FFFFFF"}
@@ -28,4 +28,4 @@ config.netrwPlainColor = {fg = "#FFFFFF"}
 config.symbolColor = {fg = "#FFFFFF"}
 config.normalColor = {bg = "#000000"}
 
-return config
+return {config}

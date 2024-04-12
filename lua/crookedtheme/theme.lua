@@ -1,6 +1,6 @@
 --:Telescope highlights
-local config = require("config")
-print(config)
+local config = require"./config"
+print(config.functionColor)
 function Apply()
     vim.api.nvim_set_hl(0, "Function", config.functionColor)
     vim.api.nvim_set_hl(0, "@function", {link = "Function"})
