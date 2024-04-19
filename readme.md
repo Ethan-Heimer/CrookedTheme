@@ -1,8 +1,8 @@
-#Crooked Themes
+# Crooked Themes
 
 Crooked Theme is an easy way to configure your own color themes in neovim!
 
-##Example Config
+## Example Config
 ```
 local crooked = require("crookedtheme")
 
