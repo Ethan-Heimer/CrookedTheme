@@ -29,10 +29,13 @@ config.netrwDirectoryColor = {fg = "#FFFFFF"}
 config.netrwPlainColor = {fg = "#FFFFFF"}
 config.symbolColor = {fg = "#FFFFFF"}
 config.normalColor = {bg = "#000000"}
+
 config.columnLineColor = {bg = "#000000"}
 config.lineNumber = {fg = "#FFFFFF"}
 config.nonText = {fg = "#FFFFFF"}
 config.menuColor = {bg = "#FFFFFF", fg = "#000000"}
+config.menuTextColor = {fg = "#000000"}
+config.cursorColumn = {bg = "#000000"}
 
 function Apply()
     vim.api.nvim_set_hl(0, "Function", config.functionColor)
@@ -111,6 +114,13 @@ function Apply()
     vim.api.nvim_set_hl(0, "LineNr", config.lineNumber)
     vim.api.nvim_set_hl(0, "NonText", config.nonText)
     vim.api.nvim_set_hl(0, "Pmenu", config.menuColor)
+    vim.api.nvim_set_hl(0, "CmpItemAbbrDefault", config.menuTextColor)
+
+    vim.api.nvim_set_hl(0, "CursorColumn", config.cursorColumn)
+    vim.api.nvim_set_hl(0, "CursorLine", {link = "CursorColumn"})
+    vim.api.nvim_set_hl(0, "FoldColumn", {link = "CursorColumn"})
+    vim.api.nvim_set_hl(0, "SignColumn", {link = "CursorColumn"})
+    vim.api.nvim_set_hl(0, "Conceal", {link = "Cursorcolumn"})
 end
 Apply()
 return {
