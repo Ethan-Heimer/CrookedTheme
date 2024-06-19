@@ -1,4 +1,5 @@
 --:Telescope highlights
+require "themeManager";
 
 local config = {}
 
@@ -8,7 +9,7 @@ config.functionColor = {fg = "#FFFFFF"}
 config.stringColor = {fg = "#FFFFFF"}
 config.classColor = {fg = "#FFFFFF"}
 config.conditionalColor = {fg = "#FFFFFF"}
-config.fieldColor = {fg = "#FFFFFF"} 
+config.fieldColor = {fg = "#FFFFFF"}
 config.moduleColor = {fg = "#FFFFFF"}
 config.macroColor = {fg = "#FFFFFF"}
 config.typeColor = {fg = "#FFFFFF"}
