@@ -1,6 +1,4 @@
 --:Telescope highlights
-require "themeManager";
-
 local config = {}
 
 config.attributeColor = {fg = "#FFFFFF"}
