@@ -35,6 +35,7 @@ config.nonText = {fg = "#FFFFFF"}
 config.menuColor = {bg = "#FFFFFF", fg = "#000000"}
 config.menuTextColor = {fg = "#000000"}
 config.cursorColumn = {bg = "#000000"}
+config.titleColor = {fg = "#FFFFFF"}
 
 function Apply()
     vim.api.nvim_set_hl(0, "Function", config.functionColor)
@@ -54,6 +55,7 @@ function Apply()
 
     vim.api.nvim_set_hl(0, "@boolean", config.booleanColor)
     vim.api.nvim_set_hl(0, "@attribute.diff", config.attributeColor)
+
     vim.api.nvim_set_hl(0, "@class", config.classColor)
     vim.api.nvim_set_hl(0, "CmpItemKindClassDefault", {link = "@class"})
 
@@ -120,6 +122,8 @@ function Apply()
     vim.api.nvim_set_hl(0, "FoldColumn", {link = "CursorColumn"})
     vim.api.nvim_set_hl(0, "SignColumn", {link = "CursorColumn"})
     vim.api.nvim_set_hl(0, "Conceal", {link = "Cursorcolumn"})
+
+    vim.api.nvim_set_hl(0, "Title", config.titleColor)
 end
 Apply()
 return {
