@@ -142,14 +142,14 @@ function Apply(name)
 
     vim.api.nvim_set_hl(0, "Title", theme.titleColor)
 
-    print("Applied " + name);
+    print("Applied " .. name);
 end
 
 vim.api.nvim_create_user_command("Theme", 
     function(opts)
         Apply(opts.args)
     end,
-    {}
+    {nargs='?'}
 )
 
 vim.api.nvim_create_user_command("ListThemes", 
