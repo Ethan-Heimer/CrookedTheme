@@ -1,5 +1,8 @@
 --:Telescope highlights
-function newTheme()
+
+local Themes = {}
+
+function NewTheme()
     local config = {}
 
     config.attributeColor = {fg = "#FFFFFF"}
@@ -41,7 +44,17 @@ function newTheme()
     return config
 end
 
-function Apply(theme)
+function AddTheme(theme, name)
+    Themes[name] = theme;
+end
+
+function GetTheme(name)
+    return Themes[name]
+end
+
+function Apply(name)
+    local theme = GetTheme(name)
+
     vim.api.nvim_set_hl(0, "Function", theme.functionColor)
     vim.api.nvim_set_hl(0, "@function", {link = "Function"})
     vim.api.nvim_set_hl(0, "@function.method", {link = "Function"})
@@ -130,10 +143,12 @@ function Apply(theme)
     vim.api.nvim_set_hl(0, "Title", theme.titleColor)
 end
 
-local testTheme = newTheme();
-Apply(testTheme)
+local testTheme = NewTheme();
+AddTheme(testTheme, "Test");
+Apply("Test")
 
 return {
     Apply = Apply,
-    NewTheme = newTheme
+    NewTheme = NewTheme,
+    AddTheme = AddTheme
 }
