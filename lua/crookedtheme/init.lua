@@ -141,18 +141,15 @@ function Apply(name)
     vim.api.nvim_set_hl(0, "Conceal", {link = "Cursorcolumn"})
 
     vim.api.nvim_set_hl(0, "Title", theme.titleColor)
+
+    print("Applied " + name);
 end
 
 vim.api.nvim_create_user_command("Theme", 
     function(opts)
-        for k,v in pairs(Themes) do
-            print(k)
-        end
-
-        print(opts.args)
         Apply(opts.args)
     end,
-    { nargs = '?'}
+    {}
 )
 
 vim.api.nvim_create_user_command("ListThemes", 
