@@ -135,5 +135,5 @@ Apply(testTheme)
 
 return {
     Apply = Apply,
-    NewThme = newTheme
+    NewTheme = newTheme
 }
