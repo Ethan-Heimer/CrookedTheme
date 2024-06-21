@@ -1,6 +1,8 @@
-local crooked = require("crookedtheme.init")
+print("hello world");
 
-vim.api.nvim_create_user_command("Theme", 
+--local crooked = require("crookedtheme.init")
+
+--[[ vim.api.nvim_create_user_command("Theme", 
     function(opts)
         crooked.Apply(opts.args)
     end,
@@ -14,4 +16,4 @@ vim.api.nvim_create_user_command("ListThemes",
         end
     end,
     {}
-)
+) ]]--
