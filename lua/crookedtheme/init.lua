@@ -1,4 +1,5 @@
 --:Telescope highlights
+require("crookedtheme.commands")
 
 local Themes = {}
 
@@ -50,6 +51,10 @@ end
 
 function GetTheme(name)
     return Themes[name]
+end
+
+function GetThemes()
+    return Themes
 end
 
 function Apply(name)
@@ -145,21 +150,7 @@ function Apply(name)
     print("Applied " .. name);
 end
 
-vim.api.nvim_create_user_command("Theme", 
-    function(opts)
-        Apply(opts.args)
-    end,
-    {nargs='?'}
-)
 
-vim.api.nvim_create_user_command("ListThemes", 
-    function (opts)
-        for k,v in pairs(Themes) do
-            print(k)
-        end
-    end,
-    {}
-)
 
 return {
     Apply = Apply,
