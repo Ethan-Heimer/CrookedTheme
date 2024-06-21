@@ -143,9 +143,26 @@ function Apply(name)
     vim.api.nvim_set_hl(0, "Title", theme.titleColor)
 end
 
-local testTheme = NewTheme();
-AddTheme(testTheme, "Test");
-Apply("Test")
+vim.api.nvim_create_user_command("Theme", 
+    function(opts)
+        for k,v in pairs(Themes) do
+            print(k)
+        end
+
+        print(opts.args)
+        Apply(opts.args)
+    end,
+    { nargs = '?'}
+)
+
+vim.api.nvim_create_user_command("ListThemes", 
+    function (opts)
+        for k,v in pairs(Themes) do
+            print(k)
+        end
+    end,
+    {}
+)
 
 return {
     Apply = Apply,
