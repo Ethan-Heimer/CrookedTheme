@@ -19,7 +19,7 @@ vim.api.nvim_create_user_command("ThemeList",
 
 vim.api.nvim_create_user_command("ThemeSelect", 
     function ()
-        crookedGUI.ShowGUI()        
+        crookedGUI.ShowGUI()
     end,
     {}
 )
