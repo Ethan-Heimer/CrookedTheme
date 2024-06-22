@@ -55,7 +55,15 @@ function GetTheme(name)
 end
 
 function GetThemes()
-    return Themes
+    local names = {};
+
+    local i = 0;
+    for k,_ in pairs(Themes) do
+        i = i + 1
+        names[i] = k
+    end
+
+    return names;
 end
 
 function Apply(name)

@@ -9,8 +9,8 @@ vim.api.nvim_create_user_command("Theme",
 
 vim.api.nvim_create_user_command("ListThemes", 
     function ()
-        for k,_ in pairs(crooked.GetThemes()) do
-            print(k)
+        for _,v in pairs(crooked.GetThemes()) do
+            print(v)
         end
     end,
     {}
