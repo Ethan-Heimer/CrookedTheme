@@ -66,9 +66,7 @@ function GetThemes()
     return names;
 end
 
-function Apply(name)
-    local theme = GetTheme(name)
-
+function Apply(theme)
     vim.api.nvim_set_hl(0, "Function", theme.functionColor)
     vim.api.nvim_set_hl(0, "@function", {link = "Function"})
     vim.api.nvim_set_hl(0, "@function.method", {link = "Function"})
@@ -157,13 +155,12 @@ function Apply(name)
     vim.api.nvim_set_hl(0, "Title", theme.titleColor)
 
     vim.api.nvim_set_hl(0, "Search", theme.searchColor)
-
-    print("Applied " .. name);
 end
 
 return {
     Apply = Apply,
     NewTheme = NewTheme,
     AddTheme = AddTheme,
+    GetTheme = GetTheme,
     GetThemes = GetThemes
 }

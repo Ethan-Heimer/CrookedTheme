@@ -3,7 +3,8 @@ local crookedGUI = require("crookedtheme.gui")
 
 vim.api.nvim_create_user_command("ThemeApply", 
     function(opts)
-        crooked.Apply(opts.args)
+        local theme = crooked.GetTheme(opts.args)
+        crooked.Apply(theme)
     end,
     {nargs='?'}
 )
