@@ -4,6 +4,8 @@ local Themes = {}
 function NewTheme()
     local config = {}
 
+    config.name = "New Theme"
+
     config.attributeColor = {fg = "#FFFFFF"}
     config.booleanColor = {fg = "#FFFFFF"}
     config.functionColor = {fg = "#FFFFFF"}
@@ -43,8 +45,8 @@ function NewTheme()
     return config
 end
 
-function AddTheme(theme, name)
-    Themes[name] = theme;
+function AddTheme(theme)
+    Themes[theme.name] = theme;
 end
 
 function GetTheme(name)
