@@ -41,6 +41,7 @@ function NewTheme()
     config.menuTextColor = {fg = "#000000"}
     config.cursorColumn = {bg = "#000000"}
     config.titleColor = {fg = "#FFFFFF"}
+    config.search = {bg = "#FFFFFF", fg = "#000000"}
 
     return config
 end
@@ -146,6 +147,8 @@ function Apply(name)
     vim.api.nvim_set_hl(0, "Conceal", {link = "Cursorcolumn"})
 
     vim.api.nvim_set_hl(0, "Title", theme.titleColor)
+
+    vim.api.nvim_set_hl(0, "Search", theme.searchColor)
 
     print("Applied " .. name);
 end
