@@ -1,21 +1,17 @@
-function ShowGUI()
-    local opts = {}
-    opts[1] = "Tabs"
-    opts[2] = "Spaces"
+local crooked = require("crookedtheme.functions")
 
-    vim.ui.select(opts, {
-        prompt = 'Select tabs or spaces:',
+function ShowGUI()
+    local themes = crooked.GetThemes()
+
+    vim.ui.select(themes, {
+        prompt = 'Select Theme:',
         format_item = function(item)
-        return "I'd like to choose " .. item
+			return item
         end,
      }, function(choice)
-         if choice == 'spaces' then
-             vim.o.expandtab = true
-         else
-             vim.o.expandtab = false
-         end
+         crooked.Apply(choice)
      end
     )
 end
 
-ShowGUI()
+return ShowGUI
