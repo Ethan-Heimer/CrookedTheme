@@ -14,4 +14,4 @@ function ShowGUI()
     )
 end
 
-return ShowGUI
+return {ShowGUI = ShowGUI}
