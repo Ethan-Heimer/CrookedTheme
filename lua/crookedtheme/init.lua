@@ -1,2 +1,4 @@
-require("crookedtheme.functions")
+local crooked = require("crookedtheme.functions")
 require("crookedtheme.commands")
+
+return crooked;
