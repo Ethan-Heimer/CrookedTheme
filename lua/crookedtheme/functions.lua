@@ -151,5 +151,6 @@ end
 return {
     Apply = Apply,
     NewTheme = NewTheme,
-    AddTheme = AddTheme
+    AddTheme = AddTheme,
+    GetThemes = GetThemes
 }
