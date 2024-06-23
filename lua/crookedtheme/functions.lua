@@ -5,6 +5,7 @@ function NewTheme()
     local config = {}
 
     config.name = "New Theme"
+    config.description = "New Crooked Theme"
 
     config.attributeColor = {fg = "#FFFFFF"}
     config.booleanColor = {fg = "#FFFFFF"}
@@ -41,6 +42,7 @@ function NewTheme()
     config.menuTextColor = {fg = "#000000"}
     config.cursorColumn = {bg = "#000000"}
     config.titleColor = {fg = "#FFFFFF"}
+    config.searchColor = {bg = "#FFFFFF", fg = "#000000"}
 
     return config
 end
@@ -54,12 +56,18 @@ function GetTheme(name)
 end
 
 function GetThemes()
-    return Themes
+    local names = {};
+
+    local i = 0;
+    for k,_ in pairs(Themes) do
+        i = i + 1
+        names[i] = k
+    end
+
+    return names;
 end
 
-function Apply(name)
-    local theme = GetTheme(name)
-
+function Apply(theme)
     vim.api.nvim_set_hl(0, "Function", theme.functionColor)
     vim.api.nvim_set_hl(0, "@function", {link = "Function"})
     vim.api.nvim_set_hl(0, "@function.method", {link = "Function"})
@@ -147,12 +155,13 @@ function Apply(name)
 
     vim.api.nvim_set_hl(0, "Title", theme.titleColor)
 
-    print("Applied " .. name);
+    vim.api.nvim_set_hl(0, "Search", theme.searchColor)
 end
 
 return {
     Apply = Apply,
     NewTheme = NewTheme,
     AddTheme = AddTheme,
+    GetTheme = GetTheme,
     GetThemes = GetThemes
 }
