@@ -9,6 +9,8 @@ function ShowGUI()
 			return item
         end,
      }, function(choice)
+         print(choice)
+
          local theme = crooked.GetTheme(choice)
          crooked.Apply(theme)
      end

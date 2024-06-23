@@ -5,6 +5,7 @@ function NewTheme()
     local config = {}
 
     config.name = "New Theme"
+    config.description = "New Crooked Theme"
 
     config.attributeColor = {fg = "#FFFFFF"}
     config.booleanColor = {fg = "#FFFFFF"}
