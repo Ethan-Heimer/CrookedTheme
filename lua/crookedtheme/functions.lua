@@ -91,7 +91,6 @@ function Apply(theme)
 
     vim.api.nvim_set_hl(0, "@conditional", theme.conditionalColor)
     vim.api.nvim_set_hl(0, "@field", theme.fieldColor)
-    vim.api.nvim_set_hl(0, "@include", theme.moduleColor)
     vim.api.nvim_set_hl(0, "@property", theme.fieldColor)
     vim.api.nvim_set_hl(0, "Constant", theme.constantColor)
 
@@ -116,7 +115,6 @@ function Apply(theme)
     vim.api.nvim_set_hl(0, "Statement", theme.keywordColor)
     vim.api.nvim_set_hl(0, "@keyword", {link = "Keyword"})
     vim.api.nvim_set_hl(0, "@keyword.return", {link = "@keyword"})
-    vim.api.nvim_set_hl(0, "@keyword.import", {link = "@keyword"})
     vim.api.nvim_set_hl(0, "@keyword.repeat", {link = "@keyword"})
     vim.api.nvim_set_hl(0, "@keyword.return", {link = "@keyword"})
     vim.api.nvim_set_hl(0, "@keyword.storage", {link = "@keyword"})
@@ -131,8 +129,12 @@ function Apply(theme)
     vim.api.nvim_set_hl(0, "@operator", {link = "Operator"})
     vim.api.nvim_set_hl(0, "@keyword.operator", {link = "@operator"})
 
-    vim.api.nvim_set_hl(0, "@variable", theme.variableColor)
     vim.api.nvim_set_hl(0, "PreProc", theme.macroColor)
+
+    vim.api.nvim_set_hl(0, "@include", theme.moduleColor)
+    vim.api.nvim_set_hl(0, "@keyword.import", {link = "@include"})
+
+    vim.api.nvim_set_hl(0, "@variable", theme.variableColor) 
     vim.api.nvim_set_hl(0, "CmpItemKindVariableDefault", {link = "@variable"})
 
     vim.api.nvim_set_hl(0, "netrwDir", theme.netrwDirectoryColor)
