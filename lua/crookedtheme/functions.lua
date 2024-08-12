@@ -7,6 +7,10 @@ function NewTheme()
     config.name = "New Theme"
     config.description = "New Crooked Theme"
 
+    config.number = {fg = "#FFFFFF"}
+    config.string = {fg = "#FFFFFF"}
+
+    --[[
     config.attributeColor = {fg = "#FFFFFF"}
     config.booleanColor = {fg = "#FFFFFF"}
     config.functionColor = {fg = "#FFFFFF"}
@@ -43,6 +47,7 @@ function NewTheme()
     config.cursorColumn = {bg = "#000000"}
     config.titleColor = {fg = "#FFFFFF"}
     config.searchColor = {bg = "#FFFFFF", fg = "#000000"}
+    ]]
 
     return config
 end
@@ -69,6 +74,10 @@ end
 
 function Apply(theme)
     print("Apply");
+
+    vim.api.nvim_set_hl(0, "Number", theme.number);
+    vim.api.nvim_set_hl(0, "String", theme.string)
+
     --[[
     vim.api.nvim_set_hl(0, "Function", theme.functionColor)
     vim.api.nvim_set_hl(0, "@function", {link = "Function"})
