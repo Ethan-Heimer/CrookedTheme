@@ -123,7 +123,6 @@ function Apply(theme)
     vim.api.nvim_set_hl(0, "@keyword.directive", {link = "@keyword"})
     vim.api.nvim_set_hl(0, "@keyword.conditional", {link = "@keyword"})
     vim.api.nvim_set_hl(0, "@keyword.conditional.ternary", {link = "@keyword"})
-    vim.api.nvim_set_hl(0, "@keyword.directive.define", {link = "@operator"})
 
     vim.api.nvim_set_hl(0, "Operator", theme.operatorColor)
     vim.api.nvim_set_hl(0, "@operator", {link = "Operator"})
