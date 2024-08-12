@@ -68,6 +68,7 @@ function GetThemes()
 end
 
 function Apply(theme)
+    /*
     vim.api.nvim_set_hl(0, "Function", theme.functionColor)
     vim.api.nvim_set_hl(0, "@function", {link = "Function"})
     vim.api.nvim_set_hl(0, "@function.method", {link = "Function"})
@@ -157,6 +158,7 @@ function Apply(theme)
     vim.api.nvim_set_hl(0, "Title", theme.titleColor)
 
     vim.api.nvim_set_hl(0, "Search", theme.searchColor)
+    */
 end
 
 return {
