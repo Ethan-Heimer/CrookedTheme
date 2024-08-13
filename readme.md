@@ -55,5 +55,39 @@ The CrookedTheme Theme Manager has 3 Commands
 ### :ThemeSelect
 -Select and Apply a theme from a selection screen
 
+## Theme API
+
+CrookedTheme provides a high level API that allows you to create custom themes easily
+
+### Getting Started
+
+Getting started with theme creation is very simple:
+1. requiere crooked theme at the top of your file
+2. use the 'crooked.NewTheme()' function to begin using the theme creation API
+
+```
+local crooked = require('crookedtheme")
+local theme = crooked.NewTheme()
+```
+
+### Building a Theme
+
+the Theme API is split into 4 sections: 
+- Base
+- Editor
+- Netrw
+- Keywords (optionals)
+
+<details>
+  <section>Base</section>
+
+  The Base Section contains all settings that have to do with basic code editing and files. Here are the settings you'll find here:
+
+  <section>Number</section>
+
+  test
+</details>
+
+
 
 
