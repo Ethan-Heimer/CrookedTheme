@@ -288,7 +288,7 @@ the Theme API is split into 4 sections:
 <details>
   <summary>Netrw</summary>
 
-   The Editor section contains all settings that have to do with Netrw. Here are the settings you'll find:
+   The Netrwr section contains all settings that have to do with Netrw. Here are the settings you'll find:
 
    <details>
     <summary>dir</summary>
@@ -384,7 +384,7 @@ the Theme API is split into 4 sections:
 <details>
   <summary>Keywords (optional)</summary>
 
-   The Editor section contains all settings that have to do with changing the colors of specific key words. These options are optional as the 'base' section covers most of these keywords. Here are the settings you'll find:
+   The Keywords section contains all settings that have to do with changing the colors of specific key words. These options are optional as the 'base' section covers most of these keywords. Here are the settings you'll find:
 
    <details>
     <summary>method</summary>
