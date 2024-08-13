@@ -61,6 +61,7 @@ function NewTheme()
     keyword.macroConstant = nil;
     keyword.import = nil;
     keyword.define = nil;
+    keyword.definitions = nil;
 
     config.base = base;
     config.editor = editor;
@@ -182,6 +183,10 @@ function Apply(theme)
 
     if(theme.keyword.builtinConstant ~= nil) then
         vim.api.nvim_set_hl(0, "@constant.builtin", theme.keyword.builtinConstant)
+    end
+
+    if(theme.keyword.definitions ~= nil) then
+        vim.api.nvim_set_hl(0, "@keyword.type", theme.keyword.definitions)
     end
 end
 
