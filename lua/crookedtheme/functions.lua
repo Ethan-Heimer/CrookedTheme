@@ -21,6 +21,7 @@ function NewTheme()
     base.symbol = {fg = "#FFFFFF"}
 
     editor.lineNumber = {fg = "#FFFFFF"}
+    editor.colorColumn = {fg = "#FFFFFF"}
 
     config.base = base;
     config.editor = editor;
@@ -102,6 +103,7 @@ function Apply(theme)
     vim.api.nvim_set_hl(0, "Special", theme.base.symbol)
 
     vim.api.nvim_set_hl(0, "LineNr", theme.editor.lineNumber)
+    vim.api.nvim_set_hl(0, "ColorColumn", theme.editor.ColorColumn)
 
     --[[
     vim.api.nvim_set_hl(0, "Function", theme.functionColor)
