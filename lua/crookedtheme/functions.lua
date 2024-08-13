@@ -5,6 +5,7 @@ function NewTheme()
     local config = {}
     local base = {}
     local editor = {}
+    local netrw = {}
 
     config.name = "New Theme"
     config.description = "New Crooked Theme"
@@ -33,47 +34,21 @@ function NewTheme()
     editor.search = {fg = "#FFFFFF"}
     editor.nontext = {fg = "#FFFFFF"}
 
+    netrw.dir = {fg = "#FFFFFF"}
+    netrw.exe = {fg = "#FFFFFF"}
+    netrw.symlink = {fg = "#FFFFFF"}
+    netrw.version = {fg = "#FFFFFF"}
+    netrw.gray = {fg = "#FFFFFF"}
+    netrw.comment = {fg = "#FFFFFF"}
+    netrw.base = {fg = "#FFFFFF"}
+    netrw.time = {fg = "#FFFFFF"}
+    netrw.date = {fg = "#FFFFFF"}
+    netrw.change = {fg = "#FFFFFF"}
+    netrw.cursorLine = {fg = "#FFFFFF"}
+
     config.base = base;
     config.editor = editor;
-
-    --[[
-    config.attributeColor = {fg = "#FFFFFF"}
-    config.booleanColor = {fg = "#FFFFFF"}
-    config.functionColor = {fg = "#FFFFFF"}
-    config.stringColor = {fg = "#FFFFFF"}
-    config.classColor = {fg = "#FFFFFF"}
-    config.conditionalColor = {fg = "#FFFFFF"}
-    config.fieldColor = {fg = "#FFFFFF"}
-    config.moduleColor = {fg = "#FFFFFF"}
-    config.macroColor = {fg = "#FFFFFF"}
-    config.typeColor = {fg = "#FFFFFF"}
-    config.textColor = {fg = "#FFFFFF"}
-    config.keywordColor = {fg = "#FFFFFF"}
-    config.builtinFunctionColor = {fg = "#FFFFFF"}
-    config.operatorColor = {fg = "#FFFFFF"}
-    config.variableColor = {fg = "#FFFFFF"}
-    config.specialTextColor = {fg = "#FFFFFF"}
-    config.commentColor = {fg = "#FFFFFF"}
-    config.commentWarningColor = {fg = "#FFFFFF"}
-    config.commentTodoColor = {fg = "#FFFFFF"}
-    config.commentErrorColor = {fg = "#FFFFFF"}
-    config.commentNoteColor = {fg = "#FFFFFF"}
-    config.characterColor = {fg = "#FFFFFF"}
-    config.constantColor = {fg = "#FFFFFF"}
-    config.netrwDirectoryColor = {fg = "#FFFFFF"}
-    config.netrwPlainColor = {fg = "#FFFFFF"}
-    config.symbolColor = {fg = "#FFFFFF"}
-    config.normalColor = {bg = "#000000"}
-
-    config.columnLineColor = {bg = "#000000"}
-    config.lineNumber = {fg = "#FFFFFF"}
-    config.nonText = {fg = "#FFFFFF"}
-    config.menuColor = {bg = "#FFFFFF", fg = "#000000"}
-    config.menuTextColor = {fg = "#000000"}
-    config.cursorColumn = {bg = "#000000"}
-    config.titleColor = {fg = "#FFFFFF"}
-    config.searchColor = {bg = "#FFFFFF", fg = "#000000"}
-    ]]
+    config.netrw = netrw;
 
     return config
 end
@@ -132,6 +107,19 @@ function Apply(theme)
     vim.api.nvim_set_hl(0, "Title", theme.editor.title)
     vim.api.nvim_set_hl(0, "Search", theme.editor.search)
     vim.api.nvim_set_hl(0, "NonText", theme.editor.nontext)
+
+    --netrw
+    vim.api.nvim_set_hl(0, "CursorLine", theme.netrw.cursorLine)
+    vim.api.nvim_set_hl(0, "netrwDir", theme.netrw.dir)
+    vim.api.nvim_set_hl(0, "netrwExe", theme.netrw.exe)
+    vim.api.nvim_set_hl(0, "netrwSymLink", theme.netrw.symlink)
+    vim.api.nvim_set_hl(0, "netrwVersion", theme.netrw.version)
+    vim.api.nvim_set_hl(0, "netrwGray", theme.netrw.gray)
+    vim.api.nvim_set_hl(0, "netrwComment", theme.netrw.comment)
+    vim.api.nvim_set_hl(0, "netrwPlain", theme.netrw.base)
+    vim.api.nvim_set_hl(0, "netrwDateSep", theme.netrw.date)
+    vim.api.nvim_set_hl(0, "netrwTimeSep", theme.netrw.time)
+    vim.api.nvim_set_hl(0, "DiffChange", theme.netrw.change)
 
     --[[
     vim.api.nvim_set_hl(0, "Function", theme.functionColor)
