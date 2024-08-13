@@ -493,6 +493,8 @@ you can export a theme at the and of your file by returming the theme object:
 return theme;
 ```
 
+A finished theme might look a little somthing like [this](https://github.com/Ethan-Heimer/CrookedPastel/blob/main/lua/crookedpastel/pastel.lua)
+
 
 
 
