@@ -28,6 +28,7 @@ function NewTheme()
     editor.indentScope = {fg = "#FFFFFF"}
     editor.error = {fg = "#FFFFFF"}
     editor.warning = {fg = "#FFFFFF"}
+    editor.menu = {bg = "#000000"}
 
     config.base = base;
     config.editor = editor;
@@ -127,6 +128,8 @@ function Apply(theme)
 
     vim.api.nvim_set_hl(0, "DiagnosticError", theme.editor.error)
     vim.api.nvim_set_hl(0, "DiagnosticWarn", theme.editor.warning)    
+
+    vim.api.nvim_set_hl(0, "Pmenu", theme.editor.menu)
 
     --[[
     vim.api.nvim_set_hl(0, "Function", theme.functionColor)
