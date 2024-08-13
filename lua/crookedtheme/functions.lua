@@ -54,6 +54,7 @@ function NewTheme()
     keyword.builtinType = nil;
     keyword.builtinMethod = nil;
     keyword.loop = nil;
+    keyword.returning = nil;
 
     config.base = base;
     config.editor = editor;
@@ -150,6 +151,10 @@ function Apply(theme)
 
     if(theme.keyword.loop ~= nil) then
         vim.api.nvim_set_hl(0, "@keyword.repeat", theme.keyword.loop)
+    end
+
+    if(theme.keyword.returning ~= nil) then
+        vim.api.nvim_set_hl(0, "@keyword.return", theme.keyword.returning)
     end
 end
 
