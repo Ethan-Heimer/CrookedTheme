@@ -42,6 +42,18 @@ crooked.AddTheme(crookedpastel.pastelNight)
 
 crooked.Apply(crookedpastel.pastel) --Apply Default Theme
 ```
+## Commands
+
+The CrookedTheme Theme Manager has 3 Commands
+
+### :ThemeApply (Theme Name)
+-Applys a theme with the given name
+
+### :ThemeList
+-Lists all themes added to the manager
+
+### :ThemeSelect
+-Select and Apply a theme from a selection screen
 
 
 
