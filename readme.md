@@ -84,10 +84,98 @@ the Theme API is split into 4 sections:
   The Base Section contains all settings that have to do with basic code editing and files. Here are the settings you'll find here:
 
   <details>
-    <summary>Number</summary>
+    <summary>number</summary>
     Changes the color of Numbers
    
+    theme.base.number = {fg = (hex), bg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>string</summary>
+    Changes the color of Strings
+   
+    theme.base.string = {fg = (hex), bg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>type</summary>
+    Changes the color of types
+   
+    theme.base.type = {fg = (hex), bg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>method</summary>
+    Changes the color of method
+   
+    theme.base.method = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>identifier</summary>
+    Changes the color of identifiers
+   
+    theme.base.identifier = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>statements</summary>
+    Changes the color of Statements
+   
+    theme.base.statement = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>comment</summary>
+    Changes the color of comments
+   
+    theme.base.comment = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>constant</summary>
+    Changes the color of constants
+   
     theme.base.number = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>preproc</summary>
+    Changes the color of pre processors
+   
+    theme.base.preproc = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>symbol</summary>
+    Changes the color of Symbols
+   
+    theme.base.symbol = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>boolean</summary>
+    Changes the color of booleans
+   
+    theme.base.boolean = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>keyword</summary>
+    Changes the color of keywords
+   
+    theme.base.keyword = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
     
   </details>
 
