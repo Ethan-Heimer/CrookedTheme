@@ -78,6 +78,7 @@ function Apply(theme)
 
     vim.api.nvim_set_hl(0, "Number", theme.number);
     vim.api.nvim_set_hl(0, "String", theme.string)
+    vim.api.nvim_set_hl(0, "Type", theme.type)
 
     --[[
     vim.api.nvim_set_hl(0, "Function", theme.functionColor)
