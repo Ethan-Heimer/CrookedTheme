@@ -4,6 +4,7 @@ local Themes = {}
 function NewTheme()
     local config = {}
     local base = {}
+    local editor = {}
 
     config.name = "New Theme"
     config.description = "New Crooked Theme"
@@ -19,7 +20,10 @@ function NewTheme()
     base.preproc = {fg = "#FFFFFF"}
     base.symbol = {fg = "#FFFFFF"}
 
+    editor.lineNumber = {fg = "#FFFFFF"}
+
     config.base = base;
+    config.editor = editor;
 
     --[[
     config.attributeColor = {fg = "#FFFFFF"}
@@ -96,6 +100,8 @@ function Apply(theme)
     vim.api.nvim_set_hl(0, "Constant", theme.base.constant)
     vim.api.nvim_set_hl(0, "PreProc", theme.base.preproc)
     vim.api.nvim_set_hl(0, "Special", theme.base.symbol)
+
+    vim.api.nvim_set_hl(0, "LineNr", theme.editor.lineNumber)
 
     --[[
     vim.api.nvim_set_hl(0, "Function", theme.functionColor)
