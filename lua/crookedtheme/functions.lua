@@ -24,7 +24,8 @@ function NewTheme()
     editor.colorColumn = {fg = "#FFFFFF"}
     editor.background = {bg = "#000000"}
     editor.cursorColumn = {bg = "#000000"}
-    editor.indentLine = {bg = "#000000"}
+    editor.indentLine = {fg = "#FFFFFF"}
+    editor.indentScope = {fg = "#FFFFFF"}
 
     config.base = base;
     config.editor = editor;
@@ -94,6 +95,7 @@ end
 function Apply(theme)
     print("Apply");
 
+    --Base Themes
     vim.api.nvim_set_hl(0, "Number", theme.base.number);
     vim.api.nvim_set_hl(0, "String", theme.base.string)
     vim.api.nvim_set_hl(0, "Type", theme.base.type)
@@ -105,6 +107,7 @@ function Apply(theme)
     vim.api.nvim_set_hl(0, "PreProc", theme.base.preproc)
     vim.api.nvim_set_hl(0, "Special", theme.base.symbol)
 
+    --Editor Themes
     vim.api.nvim_set_hl(0, "LineNr", theme.editor.lineNumber)
     vim.api.nvim_set_hl(0, "ColorColumn", theme.editor.colorColumn)
     vim.api.nvim_set_hl(0, "Normal", theme.editor.background)
@@ -118,7 +121,7 @@ function Apply(theme)
     vim.api.nvim_set_hl(0, "IndentLine", theme.editor.indentLine);
     vim.api.nvim_set_hl(0, "IblIndent", {link = "IndentLine"})
     vim.api.nvim_set_hl(0, "IblWhitespace", {link = "IndentLine"})
-
+    vim.api.nvim_set_hl(0, "IblScope", theme.editor.indentScope)
     
 
     --[[
