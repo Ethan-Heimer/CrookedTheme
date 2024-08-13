@@ -24,6 +24,7 @@ function NewTheme()
     editor.colorColumn = {fg = "#FFFFFF"}
     editor.background = {bg = "#000000"}
     editor.cursorColumn = {bg = "#000000"}
+    editor.indentLine = {bg = "#000000"}
 
     config.base = base;
     config.editor = editor;
@@ -109,12 +110,16 @@ function Apply(theme)
     vim.api.nvim_set_hl(0, "Normal", theme.editor.background)
 
     vim.api.nvim_set_hl(0, "CursorColumn", theme.editor.cursorColumn)
-    --vim.api.nvim_set_hl(0, "CursorLine", {link = "CursorColumn"})
+    --vim.api.nvim_set_hl(0, "CursorLine", {link = "CursorColumn"}) netrw
     vim.api.nvim_set_hl(0, "FoldColumn", {link = "CursorColumn"})
     vim.api.nvim_set_hl(0, "SignColumn", {link = "CursorColumn"})
     vim.api.nvim_set_hl(0, "Conceal", {link = "Cursorcolumn"})
 
+    vim.api.nvim_set_hl(0, "IndentLine", theme.editor.indentLine);
+    vim.api.nvim_set_hl(0, "@ibl.indent.char.1", {link = "IndentLine"})
+    vim.api.nvim_set_hl(0, "@ibl.whitespace.char.1", {link = "Cursorcolumn"})
 
+    
 
     --[[
     vim.api.nvim_set_hl(0, "Function", theme.functionColor)
