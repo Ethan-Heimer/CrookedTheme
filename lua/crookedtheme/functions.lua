@@ -116,8 +116,8 @@ function Apply(theme)
     vim.api.nvim_set_hl(0, "Conceal", {link = "Cursorcolumn"})
 
     vim.api.nvim_set_hl(0, "IndentLine", theme.editor.indentLine);
-    vim.api.nvim_set_hl(0, "@ibl.indent.char.1", {link = "IndentLine"})
-    vim.api.nvim_set_hl(0, "@ibl.whitespace.char.1", {link = "Cursorcolumn"})
+    vim.api.nvim_set_hl(0, "IblIndent", {link = "IndentLine"})
+    vim.api.nvim_set_hl(0, "IblWhitespace", {link = "IndentLine"})
 
     
 
