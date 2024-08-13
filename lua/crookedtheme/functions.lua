@@ -30,7 +30,8 @@ function NewTheme()
     editor.warning = {fg = "#FFFFFF"}
     editor.menu = {bg = "#000000"}
     editor.title = {fg = "#FFFFFF"}
-    editor.search = {fg = "FFFFFF"}
+    editor.search = {fg = "#FFFFFF"}
+    editor.nontext = {fg = "#FFFFFF"}
 
     config.base = base;
     config.editor = editor;
@@ -116,24 +117,21 @@ function Apply(theme)
     vim.api.nvim_set_hl(0, "LineNr", theme.editor.lineNumber)
     vim.api.nvim_set_hl(0, "ColorColumn", theme.editor.colorColumn)
     vim.api.nvim_set_hl(0, "Normal", theme.editor.background)
-
     vim.api.nvim_set_hl(0, "CursorColumn", theme.editor.cursorColumn)
     --vim.api.nvim_set_hl(0, "CursorLine", {link = "CursorColumn"}) netrw
     vim.api.nvim_set_hl(0, "FoldColumn", {link = "CursorColumn"})
     vim.api.nvim_set_hl(0, "SignColumn", {link = "CursorColumn"})
     vim.api.nvim_set_hl(0, "Conceal", {link = "Cursorcolumn"})
-
     vim.api.nvim_set_hl(0, "IndentLine", theme.editor.indentLine);
     vim.api.nvim_set_hl(0, "IblIndent", {link = "IndentLine"})
     vim.api.nvim_set_hl(0, "IblWhitespace", {link = "IndentLine"})
     vim.api.nvim_set_hl(0, "IblScope", theme.editor.indentScope)
-
     vim.api.nvim_set_hl(0, "DiagnosticError", theme.editor.error)
     vim.api.nvim_set_hl(0, "DiagnosticWarn", theme.editor.warning)    
-
     vim.api.nvim_set_hl(0, "Pmenu", theme.editor.menu)
     vim.api.nvim_set_hl(0, "Title", theme.editor.title)
     vim.api.nvim_set_hl(0, "Search", theme.editor.search)
+    vim.api.nvim_set_hl(0, "NonText", theme.editor.nontext)
 
     --[[
     vim.api.nvim_set_hl(0, "Function", theme.functionColor)
