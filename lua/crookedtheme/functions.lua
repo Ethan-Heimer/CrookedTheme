@@ -9,6 +9,7 @@ function NewTheme()
 
     config.number = {fg = "#FFFFFF"}
     config.string = {fg = "#FFFFFF"}
+    config.type = {fg = "#FFFFFF"}
 
     --[[
     config.attributeColor = {fg = "#FFFFFF"}
