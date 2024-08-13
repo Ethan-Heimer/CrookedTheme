@@ -73,10 +73,6 @@ local theme = crooked.NewTheme()
 ### Building a Theme
 
 the Theme API is split into 4 sections: 
-- Base
-- Editor
-- Netrw
-- Keywords (optional)
 
 <br>
 
