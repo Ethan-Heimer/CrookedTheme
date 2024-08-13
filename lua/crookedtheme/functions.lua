@@ -109,7 +109,7 @@ function Apply(theme)
     vim.api.nvim_set_hl(0, "Normal", theme.editor.background)
 
     vim.api.nvim_set_hl(0, "CursorColumn", theme.editor.cursorColumn)
-    vim.api.nvim_set_hl(0, "CursorLine", {link = "CursorColumn"})
+    --vim.api.nvim_set_hl(0, "CursorLine", {link = "CursorColumn"})
     vim.api.nvim_set_hl(0, "FoldColumn", {link = "CursorColumn"})
     vim.api.nvim_set_hl(0, "SignColumn", {link = "CursorColumn"})
     vim.api.nvim_set_hl(0, "Conceal", {link = "Cursorcolumn"})
