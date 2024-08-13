@@ -86,10 +86,9 @@ the Theme API is split into 4 sections:
   <details>
     <summary>Number</summary>
     Changes the color of Numbers
-
-    ```
+   
     theme.base.number = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
-    ```
+    
   </details>
 
 </details>
