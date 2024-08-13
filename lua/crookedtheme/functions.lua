@@ -54,6 +54,7 @@ function NewTheme()
     keyword.modifier = nil;
     keyword.builtinType = nil;
     keyword.builtinMethod = nil;
+    keyword.builtinConstant = nil
     keyword.loop = nil;
     keyword.returning = nil;
     keyword.conditional = nil;
@@ -177,6 +178,10 @@ function Apply(theme)
 
     if(theme.keyword.define ~= nil) then
         vim.api.nvim_set_hl(0, "@keyword.directive.define", theme.keyword.define)
+    end
+
+    if(theme.keyword.builtinConstant ~= nil) then
+        vim.api.nvim_set_hl(0, "@constant.builtin", theme.keyword.builtinConstant)
     end
 end
 
