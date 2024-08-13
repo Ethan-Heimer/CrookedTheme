@@ -53,6 +53,7 @@ function NewTheme()
     keyword.modifier = nil;
     keyword.builtinType = nil;
     keyword.builtinMethod = nil;
+    keyword.loop = nil;
 
     config.base = base;
     config.editor = editor;
@@ -145,6 +146,10 @@ function Apply(theme)
 
     if(theme.keyword.builtinMethod ~= nil) then
         vim.api.nvim_set_hl(0, "@function.builtin", theme.keyword.builtinMethod)
+    end
+
+    if(theme.keyword.loop ~= nil) then
+        vim.api.nvim_set_hl(0, "@keyword.repeat", theme.keyword.loop)
     end
 end
 
