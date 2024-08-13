@@ -51,6 +51,8 @@ function NewTheme()
 
     keyword.method = nil;
     keyword.modifier = nil;
+    keyword.builtinType = nil;
+    keyword.builtinMethod = nil;
 
     config.base = base;
     config.editor = editor;
@@ -135,6 +137,14 @@ function Apply(theme)
 
     if(theme.keyword.modifier ~= nil) then
         vim.api.nvim_set_hl(0, "@keyword.modifier", theme.keyword.modifier)
+    end
+
+    if(theme.keyword.builtinType ~= nil) then
+        vim.api.nvim_set_hl(0, "@type.builtin", theme.keyword.builtinType)
+    end
+
+    if(theme.keyword.builtinMethod ~= nil) then
+        vim.api.nvim_set_hl(0, "@function.builtin", theme.keyword.builtinMethod)
     end
 end
 
