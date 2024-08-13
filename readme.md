@@ -76,7 +76,9 @@ the Theme API is split into 4 sections:
 - Base
 - Editor
 - Netrw
-- Keywords (optionals)
+- Keywords (optional)
+
+<br>
 
 <details>
   <summary>Base</summary>
