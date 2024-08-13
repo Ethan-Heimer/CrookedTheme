@@ -487,7 +487,7 @@ The Theme API is split into 4 sections:
 
 ### Exporting a theme
 
-you can export a theme at the and of your file by returming the theme object:
+You can export a theme at the and of your file by returming the theme object:
 
 ```
 return theme;
