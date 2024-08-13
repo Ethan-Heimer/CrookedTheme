@@ -285,6 +285,102 @@ the Theme API is split into 4 sections:
   </details>
 </details>
 
+<br>
+
+<details>
+  <summary>Netrw</summary>
+
+   The Editor section contains all settings that have to do with Netrw. Here are the settings you'll find:
+
+   <details>
+    <summary>dir</summary>
+    Changes the color of directories
+   
+    theme.netrw.dir  = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>exe</summary>
+    Changes the color of executables
+   
+    theme.netrw.exe  = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>symlink</summary>
+    Changes the color of symlinks
+   
+    theme.netrw.symlink  = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>version</summary>
+    Changes the color of the netrw version
+   
+    theme.netrw.version  = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>gray</summary>
+    Changes the color of the netrw secondary color
+   
+    theme.netrw.gray  = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>comment</summary>
+    Changes the color of netrw comments
+   
+    theme.netrw.comment  = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>base</summary>
+    Changes the base color of netrw text
+   
+    theme.netrw.base  = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>time</summary>
+    Changes the color of netrw time
+   
+    theme.netrw.time  = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>date</summary>
+    Changes the color of netrw date
+   
+    theme.netrw.date  = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>change</summary>
+    Changes the color of change highlighting in netrw
+   
+    theme.netrw.change  = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>cursorLine</summary>
+    Changes the color of the cursor line
+   
+    theme.netrw.cursorLine  = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+</details>
+
 
 
 
