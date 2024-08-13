@@ -94,6 +94,7 @@ function Apply(theme)
     vim.api.nvim_set_hl(0, "PreProc", theme.preproc)
     vim.api.nvim_set_hl(0, "Special", theme.symbol)
 
+
     --[[
     vim.api.nvim_set_hl(0, "Function", theme.functionColor)
     vim.api.nvim_set_hl(0, "@function", {link = "Function"})
