@@ -83,9 +83,12 @@ the Theme API is split into 4 sections:
 
   The Base Section contains all settings that have to do with basic code editing and files. Here are the settings you'll find here:
 
-  <summary>Number</summary>
+  <details>
+    <summary>Number</summary>
 
-  test
+     Test
+  <details>
+
 </details>
 
 
