@@ -126,7 +126,7 @@ function Apply(theme)
     vim.api.nvim_set_hl(0, "IblScope", theme.editor.indentScope)
 
     vim.api.nvim_set_hl(0, "DiagnosticError", theme.editor.error)
-    vim.api.nvim_set_hl(0, "DiagnosticWarn", theme.editro.warning) 
+    vim.api.nvim_set_hl(0, "DiagnosticWarning", theme.editor.warning)    
 
     --[[
     vim.api.nvim_set_hl(0, "Function", theme.functionColor)
