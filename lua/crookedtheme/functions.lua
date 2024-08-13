@@ -23,6 +23,7 @@ function NewTheme()
     base.preproc = {fg = "#FFFFFF"}
     base.symbol = {fg = "#FFFFFF"}
     base.boolean = {fg = "#FFFFFF"}
+    base.keyword = {fg = "#FFFFFF"}
 
     editor.lineNumber = {fg = "#FFFFFF"}
     editor.colorColumn = {fg = "#FFFFFF"}
@@ -103,6 +104,7 @@ function Apply(theme)
     vim.api.nvim_set_hl(0, "PreProc", theme.base.preproc)
     vim.api.nvim_set_hl(0, "Special", theme.base.symbol)
     vim.api.nvim_set_hl(0, "Boolean", theme.base.boolean)
+    vim.api.nvim_set_hl(0, "Keyword", theme.base.keyword)
 
     --Editor Themes
     vim.api.nvim_set_hl(0, "LineNr", theme.editor.lineNumber)
