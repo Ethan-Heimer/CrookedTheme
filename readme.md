@@ -181,6 +181,8 @@ the Theme API is split into 4 sections:
 
 </details>
 
+<br>
+
 <details>
   <summary>Editor</summary>
 
