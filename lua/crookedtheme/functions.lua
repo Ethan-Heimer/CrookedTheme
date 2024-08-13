@@ -58,6 +58,7 @@ function NewTheme()
     keyword.conditional = nil;
     keyword.macroConstant = nil;
     keyword.import = nil;
+    keyword.define = nil;
 
     config.base = base;
     config.editor = editor;
@@ -170,6 +171,10 @@ function Apply(theme)
 
     if(theme.keyword.import ~= nil) then
         vim.api.nvim_set_hl(0, "@keyword.import", theme.keyword.import)
+    end
+
+    if(theme.keyword.define ~= nil) then
+        vim.api.nvim_set_hl(0, "@keyword.directive.define", theme.keyword.define)
     end
 end
 
