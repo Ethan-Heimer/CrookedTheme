@@ -3,20 +3,23 @@ local Themes = {}
 
 function NewTheme()
     local config = {}
+    local base = {}
 
     config.name = "New Theme"
     config.description = "New Crooked Theme"
 
-    config.base.number = {fg = "#FFFFFF"}
-    config.base.string = {fg = "#FFFFFF"}
-    config.base.type = {fg = "#FFFFFF"}
-    config.base.method = {fg = "#FFFFFF"}
-    config.base.identifier = {fg = "#FFFFFF"}
-    config.base.statement = {fg = "#FFFFFF"}
-    config.base.comment = {fg = "#FFFFFF"}
-    config.base.constant = {fg = "#FFFFFF"}
-    config.base.preproc = {fg = "#FFFFFF"}
-    config.base.symbol = {fg = "#FFFFFF"}
+    base.number = {fg = "#FFFFFF"}
+    base.string = {fg = "#FFFFFF"}
+    base.type = {fg = "#FFFFFF"}
+    base.method = {fg = "#FFFFFF"}
+    base.identifier = {fg = "#FFFFFF"}
+    base.statement = {fg = "#FFFFFF"}
+    base.comment = {fg = "#FFFFFF"}
+    base.constant = {fg = "#FFFFFF"}
+    base.preproc = {fg = "#FFFFFF"}
+    base.symbol = {fg = "#FFFFFF"}
+
+    config.base = base;
 
     --[[
     config.attributeColor = {fg = "#FFFFFF"}
