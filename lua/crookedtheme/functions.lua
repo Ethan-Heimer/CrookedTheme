@@ -26,6 +26,7 @@ function NewTheme()
     editor.cursorColumn = {bg = "#000000"}
     editor.indentLine = {fg = "#FFFFFF"}
     editor.indentScope = {fg = "#FFFFFF"}
+    editor.error = {fg = "#FFFFFF"}
 
     config.base = base;
     config.editor = editor;
@@ -122,6 +123,8 @@ function Apply(theme)
     vim.api.nvim_set_hl(0, "IblIndent", {link = "IndentLine"})
     vim.api.nvim_set_hl(0, "IblWhitespace", {link = "IndentLine"})
     vim.api.nvim_set_hl(0, "IblScope", theme.editor.indentScope)
+
+    vim.api.nvim_set_hl(0, "DiagnosticError", theme.editor.error)
     
 
     --[[
