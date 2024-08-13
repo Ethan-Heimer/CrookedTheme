@@ -1,6 +1,12 @@
 # Crooked Themes
 
-Crooked Theme is an easy way to configure your own color themes in neovim!
+Crooked Theme is a Theme API and manager for NeoVim!
+
+## Install
+###Packer
+...
+use 'ethan-heimer/crookedtheme
+...
 
 ## Example Config
 ```
