@@ -7,7 +7,7 @@ Crooked Theme is a Theme API and manager for NeoVim!
  <summary>Packer</summary>
 
   ```
-  require('mini.icons').setup()
+  use 'ethan-heimer/crookedtheme'
   ```
 
 </details>
