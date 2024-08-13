@@ -381,6 +381,110 @@ the Theme API is split into 4 sections:
   </details>
 </details>
 
+<br>
+
+<details>
+  <summary>Keywords (optional)</summary>
+
+   The Editor section contains all settings that have to do with changing the colors of specific key words. These options are optional as the 'base' section covers most of these keywords. Here are the settings you'll find:
+
+   <details>
+    <summary>method</summary>
+     Changes the color of the function declaration key word
+   
+     theme.keyword.method = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)} 
+  </details>
+
+   <details>
+    <summary>modifiers</summary>
+    Changes the color of modifiers
+   
+    theme.keyword.modifier  = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>builtinType</summary>
+    Changes the color of built in types
+   
+    theme.keyword.builtinType  = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>builtinMethod</summary>
+    Changes the color of built in methods
+   
+    theme.keyword.builtinMethods  = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>builtinConstant</summary>
+    Changes the color of built in constants
+   
+    theme.keyword.builtinConstants  = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>loop</summary>
+    Changes the color of loop keywords (while, for, foreach)
+   
+    theme.keyword.loop  = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>returning</summary>
+    Changes the color of the return keyword
+   
+    theme.keyword.returning  = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>conditional</summary>
+    Changes the color of conditional keywords
+   
+    theme.keyword.conditional = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>macroConstants</summary>
+    Changes the color of macro constants
+   
+    theme.keyword.macroConstant  = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>import</summary>
+    Changes the color of import keywords
+   
+    theme.keyword.import  = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>define</summary>
+    Changes the color of the '#define' keyword
+   
+    theme.keyword.define  = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>definitions</summary>
+    Changes the color of class definitions (struct, class, template)
+   
+    theme.keyword.definitions = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+   
+</details>
+
 
 
 
