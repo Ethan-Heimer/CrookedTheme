@@ -14,7 +14,7 @@ function NewTheme()
     config.identifier = {fg = "#FFFFFF"}
     config.statement = {fg = "#FFFFFF"}
     config.comment = {fg = "#FFFFFF"}
-    --config.constant = {fg = "#FFFFFF"}
+    config.constant = {fg = "#FFFFFF"}
 
     --[[
     config.attributeColor = {fg = "#FFFFFF"}
@@ -88,7 +88,7 @@ function Apply(theme)
     vim.api.nvim_set_hl(0, "Identifier", theme.identifier)
     vim.api.nvim_set_hl(0, "Statement", theme.statement)
     vim.api.nvim_set_hl(0, "Comment", theme.comment)
-    --vim.api.nvim_set_hl(0, "Constant", theme.constant)
+    vim.api.nvim_set_hl(0, "Constant", theme.constant)
 
     --[[
     vim.api.nvim_set_hl(0, "Function", theme.functionColor)
