@@ -27,6 +27,7 @@ function NewTheme()
     editor.indentLine = {fg = "#FFFFFF"}
     editor.indentScope = {fg = "#FFFFFF"}
     editor.error = {fg = "#FFFFFF"}
+    editor.warning = {fg = "#FFFFFF"}
 
     config.base = base;
     config.editor = editor;
@@ -125,6 +126,7 @@ function Apply(theme)
     vim.api.nvim_set_hl(0, "IblScope", theme.editor.indentScope)
 
     vim.api.nvim_set_hl(0, "DiagnosticError", theme.editor.error)
+    vim.api.nvim_set_hl(0, "DiagnosticWarning", theme.editor.warning)
     
 
     --[[
