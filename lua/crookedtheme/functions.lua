@@ -57,6 +57,7 @@ function NewTheme()
     keyword.returning = nil;
     keyword.conditional = nil;
     keyword.macroConstant = nil;
+    keyword.import = nil;
 
     config.base = base;
     config.editor = editor;
@@ -165,6 +166,10 @@ function Apply(theme)
 
     if(theme.keyword.macroConstant ~= nil) then
         vim.api.nvim_set_hl(0, "@constant.macro", theme.keyword.macroConstant)
+    end
+
+    if(theme.keyword.import ~= nil) then
+        vim.api.nvim_set_hl(0, "@keyword.import", theme.keyword.import)
     end
 end
 
