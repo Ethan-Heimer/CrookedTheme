@@ -1,17 +1,19 @@
 # Crooked Themes
 
-Crooked Theme is a Theme API and manager for NeoVim!
+CrookedTheme is a theme API and manager for NeoVim!
 
 ## Install
 <details>
  <summary>Packer</summary>
 
   ```
-  use 'ethan-heimer/crookedtheme'
+  use{'ethan-heimer/crookedtheme'}
   ```
 
 </details>
 
-## Example Config
+## Config
+
+
 
 
