@@ -55,6 +55,7 @@ function NewTheme()
     keyword.builtinMethod = nil;
     keyword.loop = nil;
     keyword.returning = nil;
+    keyword.conditional = nil;
 
     config.base = base;
     config.editor = editor;
@@ -155,6 +156,10 @@ function Apply(theme)
 
     if(theme.keyword.returning ~= nil) then
         vim.api.nvim_set_hl(0, "@keyword.return", theme.keyword.returning)
+    end
+
+    if(theme.keyword.conditional ~= nil) then
+        vim.api.nvim_set_hl(0, "@keyword.conditional", theme.keyword.conditional)
     end
 end
 
