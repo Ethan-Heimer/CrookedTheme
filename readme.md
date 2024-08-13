@@ -1,4 +1,4 @@
-# Crooked Themes
+# CrookedTheme
 
 CrookedTheme is a theme API and manager for NeoVim!
 
