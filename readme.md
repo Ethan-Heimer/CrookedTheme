@@ -81,7 +81,7 @@ the Theme API is split into 4 sections:
 <details>
   <summary>Base</summary>
 
-  The Base Section contains all settings that have to do with basic code editing and files. Here are the settings you'll find here:
+  The Base Section contains all settings that have to do with basic code editing and files. Here are the settings you'll find:
 
   <details>
     <summary>number</summary>
@@ -124,7 +124,7 @@ the Theme API is split into 4 sections:
   </details>
 
   <details>
-    <summary>statements</summary>
+    <summary>statement</summary>
     Changes the color of Statements
    
     theme.base.statement = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
@@ -180,6 +180,109 @@ the Theme API is split into 4 sections:
   </details>
 
 </details>
+
+<details>
+  <summary>Editor</summary>
+
+  The Editor section contains all settings that have to do with the text editor. Here are the settings you'll find:
+
+   <details>
+    <summary>lineNumber</summary>
+    Changes the color of the line numbers
+   
+    theme.editor.lineNumber = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>colorColumn</summary>
+    Changes the color of the color column
+   
+    theme.editor.colorColumn = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>background</summary>
+    Changes the color of the editor background
+   
+    theme.editor.background = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>cursorColumn</summary>
+    Changes the color of the cursor column
+   
+    theme.editor.cursorColumn = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>indentLine</summary>
+    Changes the color of an indent line (if you have one)
+   
+    theme.editor.indentLine = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>indentScope</summary>
+    Changes the color of an indent line when you are in scope (if you have one)
+   
+    theme.editor.indentScope = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>error</summary>
+    Changes the color of errors
+   
+    theme.editor.error = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>warning</summary>
+    Changes the color of warnings
+   
+    theme.editor.warning = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>menu</summary>
+    Changes the color of float menus
+   
+    theme.editor.menu = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>title</summary>
+    Changes the color of any titles
+   
+    theme.editor.title = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>search</summary>
+    Changes the color of searches
+   
+    theme.editor.search = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>nontext</summary>
+    Changes the color of non text elements
+   
+    theme.editor.nontext  = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+</details>
+
 
 
 
