@@ -24,6 +24,7 @@ function NewTheme()
     base.symbol = {fg = "#FFFFFF"}
     base.boolean = {fg = "#FFFFFF"}
     base.keyword = {fg = "#FFFFFF"}
+    base.variable = {fg = "#FFFFFF"}
 
     editor.lineNumber = {fg = "#FFFFFF"}
     editor.colorColumn = {fg = "#FFFFFF"}
@@ -101,7 +102,10 @@ function Apply(theme)
     vim.api.nvim_set_hl(0, "String", theme.base.string)
     vim.api.nvim_set_hl(0, "Type", theme.base.type)
     vim.api.nvim_set_hl(0, "Function", theme.base.method)
-    vim.api.nvim_set_hl(0, "@variable", theme.base.identifier)
+    vim.api.nvim_set_hl(0, "Variable", theme.base.variable)
+    vim.api.nvim_set_hl(0, "@variable", {link = "Variable"})
+    vim.api.nvim_set_hl(0, "lsp.type.variable", {link = "Variable"})
+    vim.api.nvim_set_hl(0, "Identifier", theme.base.identifier)
     vim.api.nvim_set_hl(0, "Statement", theme.base.statement)
     vim.api.nvim_set_hl(0, "Comment", theme.base.comment)
     vim.api.nvim_set_hl(0, "Constant", theme.base.constant)
