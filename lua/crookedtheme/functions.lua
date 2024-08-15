@@ -129,7 +129,8 @@ function Apply(theme)
 
     --netrw
     vim.api.nvim_set_hl(0, "CursorLine", theme.netrw.cursorLine)
-    vim.api.nvim_set_hl(0, "netrwDir", theme.netrw.dir)
+    vim.api.nvim_set_hl(0, "Directory", theme.netrw.dir)
+    vim.api.nvim_set_hl(0, "netrdDir", {link = "Directory"})
     vim.api.nvim_set_hl(0, "netrwExe", theme.netrw.exe)
     vim.api.nvim_set_hl(0, "netrwSymLink", theme.netrw.symlink)
     vim.api.nvim_set_hl(0, "netrwVersion", theme.netrw.version)
