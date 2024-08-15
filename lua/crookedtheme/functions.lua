@@ -220,6 +220,7 @@ function Apply(theme)
         vim.api.nvim_set_hl(0, "Operator", theme.keyword.operator)
         vim.api.nvim_set_hl(0, "@operator", {link = "Operator"})
         vim.api.nvim_set_hl(0, "@keyword.operator", {link = "Operator"})
+    end
 end
 
 return {
