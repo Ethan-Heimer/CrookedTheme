@@ -67,6 +67,7 @@ function NewTheme()
     keyword.variable = nil;
     keyword.namespace = nil;
     keyword.operators = nil;
+    keyword.property = nil;
 
     config.base = base;
     config.editor = editor;
@@ -208,6 +209,9 @@ function Apply(theme)
         vim.api.nvim_set_hl(0, "Variable", theme.keyword.variable)
         vim.api.nvim_set_hl(0, "@variable", {link = "Variable"})
         vim.api.nvim_set_hl(0, "@lsp.type.variable", {link = "Variable"})
+
+        vim.api.nvim_set_hl(0, "Property", theme.keyword.variable);
+        vim.api.nvim_set_hl(0, "@property", {link = "Property"})
     end
     
     if(theme.keyword.namespace ~= nil) then 
@@ -221,8 +225,13 @@ function Apply(theme)
         vim.api.nvim_set_hl(0, "@operator", {link = "Operator"}) 
     end
 
-    if(theme.keyword.functionoperator) then 
+    if(theme.keyword.functionoperator ~= nil) then 
         vim.api.nvim_set_hl(0, "@keyword.operator", theme.keyword.functionoperator)
+    end
+
+    if(theme.keyword.property ~= nil) then
+        vim.api.nvim_set_hl(0, "Property", theme.keyword.property);
+        vim.api.nvim_set_hl(0, "@property", {link = "Property"})
     end
 end
 
