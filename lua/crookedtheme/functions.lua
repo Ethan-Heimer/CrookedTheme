@@ -68,6 +68,7 @@ function NewTheme()
     keyword.namespace = nil;
     keyword.operators = nil;
     keyword.property = nil;
+    keyword.method = nil;
 
     config.base = base;
     config.editor = editor;
@@ -237,6 +238,10 @@ function Apply(theme)
         vim.api.nvim_set_hl(0, "@property", {link = "Property"})
         vim.api.nvim_set_hl(0, "@lsp.type.property", {link = "Property"})
         --vim.api.nvim.set.hl(0, "@variable.member", {link = "Property"})
+    end
+
+    if(theme.keyword.method ~= nil) then
+        vim.api.nvim_set_hl(0, "@keyword.function", theme.keyword.method);
     end
 end
 
