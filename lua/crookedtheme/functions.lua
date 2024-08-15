@@ -112,7 +112,7 @@ function Apply(theme)
 
     --Editor Themes
     vim.api.nvim_set_hl(0, "LineNr", theme.editor.lineNumber)
-    --vim.api.nvim_set_h1(0, "NvimTreeCursorLineNr", {link = "LineNr"})
+    vim.api.nvim_set_hl(0, "NvimTreeCursorLineNr", {link = "LineNr"})
     vim.api.nvim_set_hl(0, "ColorColumn", theme.editor.colorColumn)
     vim.api.nvim_set_hl(0, "Normal", theme.editor.background)
     vim.api.nvim_set_hl(0, "CursorColumn", theme.editor.cursorColumn)
