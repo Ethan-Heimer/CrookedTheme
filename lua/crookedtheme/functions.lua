@@ -216,10 +216,13 @@ function Apply(theme)
         vim.api.nvim_set_hl(0, "@lsp.type.namespace", {link = "Namespace"})
     end
     
-    if(theme.keyword.namespace ~= nil) then 
+    if(theme.keyword.operator ~= nil) then 
         vim.api.nvim_set_hl(0, "Operator", theme.keyword.operator)
-        vim.api.nvim_set_hl(0, "@operator", {link = "Operator"})
-        vim.api.nvim_set_hl(0, "@keyword.operator", {link = "Operator"})
+        vim.api.nvim_set_hl(0, "@operator", {link = "Operator"}) 
+    end
+
+    if(theme.keyword.functionoperator) then 
+        vim.api.nvim_set_hl(0, "@keyword.operator", theme.keyword.functionoperator)
     end
 end
 
