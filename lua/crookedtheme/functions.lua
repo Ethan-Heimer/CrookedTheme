@@ -201,7 +201,7 @@ function Apply(theme)
     end
 
     if(theme.keyword.variable ~= nul) then 
-        vim.api.nvim_set_hl(0, "Variable", theme.base.variable)
+        vim.api.nvim_set_hl(0, "Variable", theme.keyword.variable)
         vim.api.nvim_set_hl(0, "@variable", {link = "Variable"})
         vim.api.nvim_set_hl(0, "@lsp.type.variable", {link = "Variable"})
     end
