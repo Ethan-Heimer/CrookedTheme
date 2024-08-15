@@ -212,7 +212,7 @@ function Apply(theme)
     if(theme.keyword.namespace ~= nil) then 
         vim.api.nvim_set_hl(0, "Namespace", theme.keyord.namespace)
         vim.api.nvim_set_hl(0, "@namespace", {link = "Namespace"})
-        vim.api.nvim_set_hl(0, "@lsp.type.namespace", {link = "Namespace"}
+        vim.api.nvim_set_hl(0, "@lsp.type.namespace", {link = "Namespace"})
     end
 
 end
