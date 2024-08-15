@@ -212,6 +212,7 @@ function Apply(theme)
 
         vim.api.nvim_set_hl(0, "Property", theme.keyword.variable);
         vim.api.nvim_set_hl(0, "@property", {link = "Property"})
+        vim.api.nvim_set_hl(0, "@lsp.type.property", {Link = "Property"})
     end
     
     if(theme.keyword.namespace ~= nil) then 
@@ -232,6 +233,7 @@ function Apply(theme)
     if(theme.keyword.property ~= nil) then
         vim.api.nvim_set_hl(0, "Property", theme.keyword.property);
         vim.api.nvim_set_hl(0, "@property", {link = "Property"})
+        vim.api.nvim_set_hl(0, "@lsp.type.property", {Link = "Property"})
     end
 end
 
