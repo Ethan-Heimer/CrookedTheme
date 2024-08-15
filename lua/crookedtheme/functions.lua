@@ -65,6 +65,7 @@ function NewTheme()
     keyword.define = nil;
     keyword.definitions = nil;
     keyword.variable = nil;
+    keyword.namespace = nil;
 
     config.base = base;
     config.editor = editor;
