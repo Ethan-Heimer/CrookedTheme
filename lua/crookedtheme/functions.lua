@@ -203,13 +203,13 @@ function Apply(theme)
         vim.api.nvim_set_hl(0, "@keyword.type", theme.keyword.definitions)
     end
 
-    if(theme.keyword.variable ~= nul) then 
+    if(theme.keyword.variable ~= nil) then 
         vim.api.nvim_set_hl(0, "Variable", theme.keyword.variable)
         vim.api.nvim_set_hl(0, "@variable", {link = "Variable"})
         vim.api.nvim_set_hl(0, "@lsp.type.variable", {link = "Variable"})
     end
     
-    if(theme.keyword.namespace ~- nil) then 
+    if(theme.keyword.namespace ~= nil) then 
         vim.api.nvim_set_hl(0, "Namespace", theme.keyord.namespace)
         vim.api.nvim_set_hl(0, "@namespace", {link = "Namespace"})
         vim.api.nvim_set_hl(0, "@lsp.type.namespace", {link = "Namespace"}
