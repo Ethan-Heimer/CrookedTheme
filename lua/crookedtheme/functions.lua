@@ -49,6 +49,8 @@ function NewTheme()
     netrw.date = {fg = "#FFFFFF"}
     netrw.change = {fg = "#FFFFFF"}
     netrw.cursorLine = {fg = "#FFFFFF"}
+    netrw.folder = {fg = "#FFFFFF"}
+    netrw.image = {fg = "#FFFFFF"}
 
     keyword.method = nil;
     keyword.modifier = nil;
@@ -110,6 +112,7 @@ function Apply(theme)
 
     --Editor Themes
     vim.api.nvim_set_hl(0, "LineNr", theme.editor.lineNumber)
+    vim.api.nvim_set_h1(0, "NvimTreeCursorLineNr", {link = "LineNr"})
     vim.api.nvim_set_hl(0, "ColorColumn", theme.editor.colorColumn)
     vim.api.nvim_set_hl(0, "Normal", theme.editor.background)
     vim.api.nvim_set_hl(0, "CursorColumn", theme.editor.cursorColumn)
@@ -121,7 +124,7 @@ function Apply(theme)
     vim.api.nvim_set_hl(0, "IblWhitespace", {link = "IndentLine"})
     vim.api.nvim_set_hl(0, "IblScope", theme.editor.indentScope)
     vim.api.nvim_set_hl(0, "DiagnosticError", theme.editor.error)
-    vim.api.nvim_set_hl(0, "DiagnosticWarn", theme.editor.warning)    
+    vim.api.nvim_set_hl(0, "DiagnosticWarn", theme.editor.warning)
     vim.api.nvim_set_hl(0, "Pmenu", theme.editor.menu)
     vim.api.nvim_set_hl(0, "Title", theme.editor.title)
     vim.api.nvim_set_hl(0, "Search", theme.editor.search)
@@ -144,6 +147,8 @@ function Apply(theme)
     vim.api.nvim_set_hl(0, "netrwDateSep", theme.netrw.date)
     vim.api.nvim_set_hl(0, "netrwTimeSep", theme.netrw.time)
     vim.api.nvim_set_hl(0, "DiffChange", theme.netrw.change)
+    vim.api.nvim_set_hl(0, "NvimTreeFolderIcon", theme.netrw.folder)
+    vim.api.nvim_set_hl(0, "NvimTreeImageFile", theme.netrw.image)
 
     --Keywords
     if(theme.keyword.method ~= nil) then
