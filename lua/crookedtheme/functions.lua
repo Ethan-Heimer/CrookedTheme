@@ -66,6 +66,7 @@ function NewTheme()
     keyword.definitions = nil;
     keyword.variable = nil;
     keyword.namespace = nil;
+    keyword.operators = nil;
 
     config.base = base;
     config.editor = editor;
@@ -214,7 +215,11 @@ function Apply(theme)
         vim.api.nvim_set_hl(0, "@namespace", {link = "Namespace"})
         vim.api.nvim_set_hl(0, "@lsp.type.namespace", {link = "Namespace"})
     end
-
+    
+    if(theme.keyword.namespace ~= nil) then 
+        vim.api.nvim_set_hl(0, "Operator", theme.keyword.operator)
+        vim.api.nvim_set_hl(0, "@operator", {link = "Operator"})
+        vim.api.nvim_set_hl(0, "@keyword.operator", {link = "Operator"})
 end
 
 return {
