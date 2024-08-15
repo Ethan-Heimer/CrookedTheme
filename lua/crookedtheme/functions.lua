@@ -114,6 +114,7 @@ function Apply(theme)
     vim.api.nvim_set_hl(0, "PreProc", theme.base.preproc)
     vim.api.nvim_set_hl(0, "Special", theme.base.symbol)
     vim.api.nvim_set_hl(0, "Boolean", theme.base.boolean)
+    vim.api.nvim_set_hl(0, "@boolean", {link = "Boolean"})
     vim.api.nvim_set_hl(0, "Keyword", theme.base.keyword)
 
     --Editor Themes
