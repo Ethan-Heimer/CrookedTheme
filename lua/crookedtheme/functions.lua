@@ -147,7 +147,7 @@ function Apply(theme)
     vim.api.nvim_set_hl(0, "netrwDateSep", theme.netrw.date)
     vim.api.nvim_set_hl(0, "netrwTimeSep", theme.netrw.time)
     vim.api.nvim_set_hl(0, "DiffChange", theme.netrw.change)
-    --vim.api.nvim_set_hl(0, "NvimTreeFolderIcon", theme.netrw.folder)
+    vim.api.nvim_set_hl(0, "NvimTreeFolderIcon", theme.netrw.folder)
     --vim.api.nvim_set_hl(0, "NvimTreeImageFile", theme.netrw.image)
 
     --Keywords
