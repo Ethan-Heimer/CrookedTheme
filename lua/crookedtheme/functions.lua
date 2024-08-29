@@ -69,6 +69,7 @@ function NewTheme()
     keyword.operators = nil;
     keyword.property = nil;
     keyword.method = nil;
+    keyword.parameter = nil;
 
     config.base = base;
     config.editor = editor;
@@ -243,6 +244,14 @@ function Apply(theme)
     if(theme.keyword.method ~= nil) then
         vim.api.nvim_set_hl(0, "@keyword.function", theme.keyword.method);
     end
+
+    if(theme.keyword.parameter ~= nil) then 
+        vim.api.nvim_set_hl(0, "Parameter", theme.keyword.parameter)
+        vim.api.nvim_set_hl(0, "@parameter", {link = "Parameter"})
+        vim.api.nvim_set_hl(0, "@variable.parameter", {link = "Parameter"})
+         vim.api.nvim_set_hl(0, "@lsp.type.parameter", {link = "Parameter"})
+    end
+        
 end
 
 return {
