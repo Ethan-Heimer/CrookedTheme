@@ -70,6 +70,7 @@ function NewTheme()
     keyword.property = nil;
     keyword.method = nil;
     keyword.parameter = nil;
+    keyword.escapeChar = nil;
 
     config.base = base;
     config.editor = editor;
@@ -245,13 +246,16 @@ function Apply(theme)
         vim.api.nvim_set_hl(0, "@keyword.function", theme.keyword.method);
     end
 
-    if(theme.keyword.parameter ~= nil) then 
+    if(theme.keyword.parameter ~= nil) then
         vim.api.nvim_set_hl(0, "Parameter", theme.keyword.parameter)
         vim.api.nvim_set_hl(0, "@parameter", {link = "Parameter"})
         vim.api.nvim_set_hl(0, "@variable.parameter", {link = "Parameter"})
          vim.api.nvim_set_hl(0, "@lsp.type.parameter", {link = "Parameter"})
     end
-        
+
+    if(theme.keyword.escapeChar ~= nil) then
+        vim.api.nvim_set_hl(0, "@string.escape", theme.keyword.escapeChar);
+    end
 end
 
 return {
