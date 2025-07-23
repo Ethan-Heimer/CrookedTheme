@@ -72,6 +72,7 @@ function NewTheme()
     keyword.parameter = nil;
     keyword.escapeChar = nil;
     keyword.macroMethod = nil;
+    keyword.functionCall = nil;
 
     config.base = base;
     config.editor = editor;
@@ -260,6 +261,10 @@ function Apply(theme)
 
     if(theme.keyword.macroMethod ~= nil) then
         vim.api.nvim_set_hl(0, "@function.macro", theme.keyword.macroMethod);
+    end
+    
+    if(theme.keyword.functionCall ~= nil) then
+        vim.api.nvim_set_hl(0, "@function.call", theme.keyword.functionCall);
     end
 end
 
