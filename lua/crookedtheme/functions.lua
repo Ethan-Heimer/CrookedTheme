@@ -37,7 +37,7 @@ function NewTheme()
     editor.title = {fg = "#FFFFFF"}
     editor.search = {fg = "#FFFFFF"}
     editor.nontext = {fg = "#FFFFFF"}
-    editor.cmpBox = {fg = "#FFFFFF"}
+    editor.cmpBox = {bg = "#000000"}
 
     netrw.dir = {fg = "#FFFFFF"}
     netrw.exe = {fg = "#FFFFFF"}
@@ -142,7 +142,7 @@ function Apply(theme)
     vim.api.nvim_set_hl(0, "Title", theme.editor.title)
     vim.api.nvim_set_hl(0, "Search", theme.editor.search)
     vim.api.nvim_set_hl(0, "NonText", theme.editor.nontext)
-    vim.api.nvim_set_hl(0, "CmpItemKindDefault", theme.editor.cmpBox)
+    vim.api.nvim_set_hl(0, "CmpItemMenuDefault", theme.editor.cmpBox)
 
     --netrw
     vim.api.nvim_set_hl(0, "CursorLine", theme.netrw.cursorLine)
