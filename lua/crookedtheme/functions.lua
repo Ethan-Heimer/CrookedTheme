@@ -74,6 +74,8 @@ function NewTheme()
     keyword.macroMethod = nil;
     keyword.functionCall = nil;
     keyword.regex = nil;
+    keyword.allocation = nil;
+    keyword.namespace = nil;
 
     config.base = base;
     config.editor = editor;
@@ -270,6 +272,10 @@ function Apply(theme)
 
     if(theme.keyword.regex ~= nil) then
         vim.api.nvim_set_hl(0, "@string.regex", theme.keyword.regex);
+    end
+
+    if(theme.keyword.namespace ~= nil) then
+        vim.api.nvim_set_hl(0, "@lsp.type.namespace", theme.keyword.namespace);
     end
 
 end
