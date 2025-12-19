@@ -23,7 +23,7 @@ CrookedTheme is a theme manager and API for NeoVim.
 
 ## Config
 Adding a capatable theme to Crooked Theme is very simple. The Following is a
-walk through to install the [Crooked Teeth] (https://github.com/Ethan-Heimer/CrookedTeeth)
+walk through to install the [Crooked Teeth](https://github.com/Ethan-Heimer/CrookedTeeth)
 Theme using Lazy Nvim.
 
 1. Install The Theme
@@ -48,6 +48,36 @@ crooked.AddTheme(crookedteeth)
 crooked.Apply(crookedteeth)
 ```
 
+Here is what a complete config looks like:
+```lua
+-- crookedtheme.lua
+return {
+    { -- install crooked theme manager
+        'ethan-heimer/crookedtheme',
+        branch = 'main', -- optional
+
+        -- crooked theme config
+        config = function()
+            local crooked = require("crookedtheme")
+
+            local crookedteeth = require("crookedteeth")
+            local crookedslick = require("crookedslick")
+
+            crooked.AddTheme(crookedteeth)
+            crooked.AddTheme(crookedslick)
+
+            -- apply a default theme
+            crooked.Apply(crookedteeth)
+        end
+    },
+    { -- install crooked teeth theme
+        'ethan-heimer/crookedteeth'
+    },
+    { -- install crooked slick theme 
+        'ethan-heimer/crookedslick'
+    }
+}
+```
 
 ## Commands
 
