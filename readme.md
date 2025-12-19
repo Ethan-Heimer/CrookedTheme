@@ -1,6 +1,6 @@
 # CrookedTheme
 
-CrookedTheme is a theme API and manager for NeoVim!
+CrookedTheme is a theme manager and API for NeoVim.
 
 ## Install
 <details>
@@ -12,36 +12,43 @@ CrookedTheme is a theme API and manager for NeoVim!
 
 </details>
 
+<details>
+ <summary>Lazy</summary>
+
+  ```
+  return {'ethan-heimer/crookedtheme'}
+  ```
+
+</details>
+
 ## Config
+Adding a capatable theme to Crooked Theme is very simple. The Following is a
+walk through to install the [Crooked Teeth] (https://github.com/Ethan-Heimer/CrookedTeeth)
+Theme using Lazy Nvim.
 
-The main config for CrookedTheme looks likt this: 
-
+1. Install The Theme
+```lua
+{
+    'ethan-heimer/crookedteeth'
+}
 ```
+
+2. Regester the theme into Crooked Theme
+```lua
+-- In the crooked theme config
 local crooked = require("crookedtheme")
+local crookedteeth = require("crookedteeth")
+    
+crooked.AddTheme(crookedteeth)
 ```
 
-### Adding themes to the manager 
-
-Only themes compatable with CrookedTheme can be added to the manager. 
-
-To add a theme to the manager:
-1. Require the theme in the your CrookedTheme config file
-2. Use the 'crooked.AddTheme' function to add the theme'
-3. Use the 'crooked.ApplyTheme' function to apply a default theme at start up
-
-An example config using [CrookedPastel Themes](https://github.com/Ethan-Heimer/CrookedPastel) looks like this:
-
+3. Apply the theme as default (optional)
+```lua
+-- This will apply the theme when NeoVim is started
+crooked.Apply(crookedteeth)
 ```
-local crooked = require("crookedtheme") --CrookedTheme theme manager
 
-local crookedpastel = require("crookedpastel") --Theme Package that youll add
 
-crooked.AddTheme(crookedpastel.pastel) --Adding Themes in package to the manager
-crooked.Addtheme(crookedpastel.pastelLight)
-crooked.AddTheme(crookedpastel.pastelNight)
-
-crooked.Apply(crookedpastel.pastel) --Apply Default Theme
-```
 ## Commands
 
 The CrookedTheme Theme Manager has 3 Commands
