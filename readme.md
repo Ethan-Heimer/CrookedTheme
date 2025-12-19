@@ -80,17 +80,16 @@ return {
 ```
 
 ## Commands
+The CrookedTheme Theme Manager has 3 Commands:
 
-The CrookedTheme Theme Manager has 3 Commands
+1. ThemeApply (Theme Name)
+Applys a theme with the given name.
 
-### :ThemeApply (Theme Name)
--Applys a theme with the given name
+2. ThemeSelect
+Select and Apply a theme from a selection screen.
 
-### :ThemeList
--Lists all themes added to the manager
-
-### :ThemeSelect
--Select and Apply a theme from a selection screen
+3. ThemeList
+Lists all themes added to the manager.
 
 ## Theme API
 
