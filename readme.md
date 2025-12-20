@@ -82,35 +82,30 @@ return {
 ## Commands
 The CrookedTheme Theme Manager has 3 Commands:
 
-1. ThemeApply (Theme Name)
+1. ***:ThemeApply*** (Theme Name)
 Applys a theme with the given name.
 
-2. ThemeSelect
+2. ***:ThemeSelect***
 Select and Apply a theme from a selection screen.
 
-3. ThemeList
+3. ***:ThemeList***
 Lists all themes added to the manager.
 
-## Theme API
-
-CrookedTheme provides a high level API that allows you to create custom themes easily
+## Theme Development API
+CrookedTheme provides a high level API that allows you to create custom themes easily.
 
 ### Getting Started
+Getting started is as simple as cloning the template repository 
+[here](https://github.com/Ethan-Heimer/CrookedThemeBase.git).
 
-Getting started with theme creation is very simple:
-1. requiere crooked theme at the top of your file
-2. use the 'crooked.NewTheme()' function to begin using the theme creation API
+With the template, to name your theme, run `./name {Your Theme Name}`. This will
+Handle renaming everything that needs your themes name.
 
-```
-local crooked = require('crookedtheme")
-local theme = crooked.NewTheme()
-```
+The main theme file can be found at `./lua/{Your Theme Name}/theme.lua`, where
+you can begin using the Theme Development API to start making your own theme.
 
 ### Building a Theme
-
 The Theme API is split into 4 sections: 
-
-<br>
 
 <details>
   <summary>Base</summary>
@@ -214,9 +209,6 @@ The Theme API is split into 4 sections:
   </details>
 
 </details>
-
-<br>
-
 <details>
   <summary>Editor</summary>
 
@@ -318,9 +310,6 @@ The Theme API is split into 4 sections:
     
   </details>
 </details>
-
-<br>
-
 <details>
   <summary>Netrw</summary>
 
@@ -414,9 +403,6 @@ The Theme API is split into 4 sections:
     
   </details>
 </details>
-
-<br>
-
 <details>
   <summary>Keywords (optional)</summary>
 
@@ -518,9 +504,6 @@ The Theme API is split into 4 sections:
   </details>
    
 </details>
-
-<br>
-
 ### Exporting a theme
 
 You can export a theme at the and of your file by returming the theme object:
