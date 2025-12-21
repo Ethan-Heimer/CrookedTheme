@@ -98,7 +98,7 @@ CrookedTheme provides a high level API that allows you to create custom themes e
 Getting started is as simple as cloning the template repository 
 [here](https://github.com/Ethan-Heimer/CrookedThemeBase.git).
 
-With the template, to name your theme, run `./name {Your Theme Name}`. This will
+With the template, to name your theme, run `./name.sh {Your Theme Name}`. This will
 Handle renaming everything that needs your themes name.
 
 The main theme file can be found at `./lua/{Your Theme Name}/theme.lua`, where
@@ -503,16 +503,88 @@ The Theme API is split into 4 sections:
     
   </details>
    
+  <details>
+    <summary>variable</summary>
+    Changes the color of variables and variable definitions
+   
+    theme.keyword.variable = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>namespace</summary>
+    Changes the color of namespaces
+   
+    theme.keyword.namespace = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>operators</summary>
+    Changes the color of operators
+   
+    theme.keyword.operators = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>property</summary>
+    Changes the color of class properties
+   
+    theme.keyword.property = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>parameter</summary>
+    Changes the color of function parameters
+   
+    theme.keyword.parameter = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>escapeChar</summary>
+    Changes the color of escape characters
+   
+    theme.keyword.escapeChar = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>macroMethod</summary>
+    Changes the color of class macro methods
+   
+    theme.keyword.macroMethod = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>functionCall</summary>
+    Changes the color of function calls
+   
+    theme.keyword.functionCall = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>regex</summary>
+    Changes the color of regex patterns
+   
+    theme.keyword.regex = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>allocation</summary>
+    Changes the color of allocation keywords (may not work for 'new' and 'delete' in C++)
+   
+    theme.keyword.allocation = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
 </details>
-### Exporting a theme
 
-You can export a theme at the and of your file by returming the theme object:
-
-```
-return theme;
-```
-
-A finished theme might look a little somthing like [this](https://github.com/Ethan-Heimer/CrookedPastel/blob/main/lua/crookedpastel/pastel.lua)
+A finished theme might look a little something like [this](https://github.com/Ethan-Heimer/CrookedPastel/blob/main/lua/crookedpastel/pastel.lua)
 
 
 
