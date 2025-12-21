@@ -585,7 +585,11 @@ The Theme API is split into 4 sections:
 
 A finished theme might look a little something like [this](https://github.com/Ethan-Heimer/CrookedPastel/blob/main/lua/crookedpastel/pastel.lua)
 
+## Capatable Themes
 
+- [Crooked Pastel](https://github.com/Ethan-Heimer/CrookedPastel)
+- [Crooked Slick](https://github.com/Ethan-Heimer/CrookedSlick)
+- [Crooked Teeth](https://github.com/Ethan-Heimer/CrookedTeeth)
 
 
 
