@@ -1,6 +1,5 @@
 # CrookedTheme
-
-CrookedTheme is a theme API and manager for NeoVim!
+CrookedTheme is a theme manager and API for NeoVim.
 
 ## Install
 <details>
@@ -12,69 +11,100 @@ CrookedTheme is a theme API and manager for NeoVim!
 
 </details>
 
+<details>
+ <summary>Lazy</summary>
+
+  ```
+  return {'ethan-heimer/crookedtheme'}
+  ```
+
+</details>
+
 ## Config
+Adding a capatable theme to Crooked Theme is very simple. The Following is a
+walk through to install the [Crooked Teeth](https://github.com/Ethan-Heimer/CrookedTeeth)
+Theme using Lazy Nvim.
 
-The main config for CrookedTheme looks likt this: 
-
+1. Install The Theme
+```lua
+{
+    'ethan-heimer/crookedteeth'
+}
 ```
+
+2. Regester the theme into Crooked Theme
+```lua
+-- In the crooked theme config
 local crooked = require("crookedtheme")
+local crookedteeth = require("crookedteeth")
+    
+crooked.AddTheme(crookedteeth)
 ```
 
-### Adding themes to the manager 
-
-Only themes compatable with CrookedTheme can be added to the manager. 
-
-To add a theme to the manager:
-1. Require the theme in the your CrookedTheme config file
-2. Use the 'crooked.AddTheme' function to add the theme'
-3. Use the 'crooked.ApplyTheme' function to apply a default theme at start up
-
-An example config using [CrookedPastel Themes](https://github.com/Ethan-Heimer/CrookedPastel) looks like this:
-
+3. Apply the theme as default (optional)
+```lua
+-- This will apply the theme when NeoVim is started
+crooked.Apply(crookedteeth)
 ```
-local crooked = require("crookedtheme") --CrookedTheme theme manager
 
-local crookedpastel = require("crookedpastel") --Theme Package that youll add
+Here is what a complete config looks like:
+```lua
+-- crookedtheme.lua
+return {
+    { -- install crooked theme manager
+        'ethan-heimer/crookedtheme',
+        branch = 'main', -- optional
 
-crooked.AddTheme(crookedpastel.pastel) --Adding Themes in package to the manager
-crooked.Addtheme(crookedpastel.pastelLight)
-crooked.AddTheme(crookedpastel.pastelNight)
+        -- crooked theme config
+        config = function()
+            local crooked = require("crookedtheme")
 
-crooked.Apply(crookedpastel.pastel) --Apply Default Theme
+            local crookedteeth = require("crookedteeth")
+            local crookedslick = require("crookedslick")
+
+            crooked.AddTheme(crookedteeth)
+            crooked.AddTheme(crookedslick)
+
+            -- apply a default theme
+            crooked.Apply(crookedteeth)
+        end
+    },
+    { -- install crooked teeth theme
+        'ethan-heimer/crookedteeth'
+    },
+    { -- install crooked slick theme 
+        'ethan-heimer/crookedslick'
+    }
+}
 ```
+
 ## Commands
+The CrookedTheme Theme Manager has 3 Commands:
 
-The CrookedTheme Theme Manager has 3 Commands
+1. ***:ThemeApply*** (Theme Name)
+Applys a theme with the given name.
 
-### :ThemeApply (Theme Name)
--Applys a theme with the given name
+2. ***:ThemeSelect***
+Select and Apply a theme from a selection screen.
 
-### :ThemeList
--Lists all themes added to the manager
+3. ***:ThemeList***
+Lists all themes added to the manager.
 
-### :ThemeSelect
--Select and Apply a theme from a selection screen
-
-## Theme API
-
-CrookedTheme provides a high level API that allows you to create custom themes easily
+## Theme Development API
+CrookedTheme provides a high level API that allows you to create custom themes easily.
 
 ### Getting Started
+Getting started is as simple as cloning the template repository 
+[here](https://github.com/Ethan-Heimer/CrookedThemeBase.git).
 
-Getting started with theme creation is very simple:
-1. requiere crooked theme at the top of your file
-2. use the 'crooked.NewTheme()' function to begin using the theme creation API
+With the template, to name your theme, run `./name.sh {Your Theme Name}`. This will
+Handle renaming everything that needs your themes name.
 
-```
-local crooked = require('crookedtheme")
-local theme = crooked.NewTheme()
-```
+The main theme file can be found at `./lua/{Your Theme Name}/theme.lua`, where
+you can begin using the Theme Development API to start making your own theme.
 
 ### Building a Theme
-
 The Theme API is split into 4 sections: 
-
-<br>
 
 <details>
   <summary>Base</summary>
@@ -178,9 +208,6 @@ The Theme API is split into 4 sections:
   </details>
 
 </details>
-
-<br>
-
 <details>
   <summary>Editor</summary>
 
@@ -282,9 +309,6 @@ The Theme API is split into 4 sections:
     
   </details>
 </details>
-
-<br>
-
 <details>
   <summary>Netrw</summary>
 
@@ -378,9 +402,6 @@ The Theme API is split into 4 sections:
     
   </details>
 </details>
-
-<br>
-
 <details>
   <summary>Keywords (optional)</summary>
 
@@ -481,19 +502,88 @@ The Theme API is split into 4 sections:
     
   </details>
    
+  <details>
+    <summary>variable</summary>
+    Changes the color of variables and variable definitions
+   
+    theme.keyword.variable = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>namespace</summary>
+    Changes the color of namespaces
+   
+    theme.keyword.namespace = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>operators</summary>
+    Changes the color of operators
+   
+    theme.keyword.operators = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>property</summary>
+    Changes the color of class properties
+   
+    theme.keyword.property = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>parameter</summary>
+    Changes the color of function parameters
+   
+    theme.keyword.parameter = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>escapeChar</summary>
+    Changes the color of escape characters
+   
+    theme.keyword.escapeChar = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>macroMethod</summary>
+    Changes the color of class macro methods
+   
+    theme.keyword.macroMethod = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>functionCall</summary>
+    Changes the color of function calls
+   
+    theme.keyword.functionCall = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>regex</summary>
+    Changes the color of regex patterns
+   
+    theme.keyword.regex = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
+
+  <details>
+    <summary>allocation</summary>
+    Changes the color of allocation keywords (may not work for 'new' and 'delete' in C++)
+   
+    theme.keyword.allocation = {fg = (hex), bold = (flag), underline = (flag), italic = (flag)}
+    
+  </details>
 </details>
 
-<br>
-
-### Exporting a theme
-
-You can export a theme at the and of your file by returming the theme object:
-
-```
-return theme;
-```
-
-A finished theme might look a little somthing like [this](https://github.com/Ethan-Heimer/CrookedPastel/blob/main/lua/crookedpastel/pastel.lua)
+A finished theme might look a little something like [this](https://github.com/Ethan-Heimer/CrookedPastel/blob/main/lua/crookedpastel/pastel.lua)
 
 
 

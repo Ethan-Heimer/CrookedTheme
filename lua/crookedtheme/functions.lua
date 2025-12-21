@@ -49,6 +49,8 @@ function NewTheme()
     netrw.date = {fg = "#FFFFFF"}
     netrw.change = {fg = "#FFFFFF"}
     netrw.cursorLine = {fg = "#FFFFFF"}
+    netrw.folder = {fg = "#FFFFFF"}
+    netrw.image = {fg = "#FFFFFF"}
 
     keyword.method = nil;
     keyword.modifier = nil;
@@ -62,6 +64,18 @@ function NewTheme()
     keyword.import = nil;
     keyword.define = nil;
     keyword.definitions = nil;
+    keyword.variable = nil;
+    keyword.namespace = nil;
+    keyword.operators = nil;
+    keyword.property = nil;
+    keyword.method = nil;
+    keyword.parameter = nil;
+    keyword.escapeChar = nil;
+    keyword.macroMethod = nil;
+    keyword.functionCall = nil;
+    keyword.regex = nil;
+    keyword.allocation = nil;
+    keyword.namespace = nil;
 
     config.base = base;
     config.editor = editor;
@@ -99,6 +113,8 @@ function Apply(theme)
     vim.api.nvim_set_hl(0, "String", theme.base.string)
     vim.api.nvim_set_hl(0, "Type", theme.base.type)
     vim.api.nvim_set_hl(0, "Function", theme.base.method)
+    vim.api.nvim_set_hl(0, "@function.macro", {link = "Function"}) 
+    vim.api.nvim_set_hl(0, "@function.call", {link = "Function"})
     vim.api.nvim_set_hl(0, "Identifier", theme.base.identifier)
     vim.api.nvim_set_hl(0, "Statement", theme.base.statement)
     vim.api.nvim_set_hl(0, "Comment", theme.base.comment)
@@ -106,10 +122,12 @@ function Apply(theme)
     vim.api.nvim_set_hl(0, "PreProc", theme.base.preproc)
     vim.api.nvim_set_hl(0, "Special", theme.base.symbol)
     vim.api.nvim_set_hl(0, "Boolean", theme.base.boolean)
+    vim.api.nvim_set_hl(0, "@boolean", {link = "Boolean"})
     vim.api.nvim_set_hl(0, "Keyword", theme.base.keyword)
 
     --Editor Themes
     vim.api.nvim_set_hl(0, "LineNr", theme.editor.lineNumber)
+    vim.api.nvim_set_hl(0, "NvimTreeCursorLineNr", {link = "LineNr"})
     vim.api.nvim_set_hl(0, "ColorColumn", theme.editor.colorColumn)
     vim.api.nvim_set_hl(0, "Normal", theme.editor.background)
     vim.api.nvim_set_hl(0, "CursorColumn", theme.editor.cursorColumn)
@@ -121,7 +139,7 @@ function Apply(theme)
     vim.api.nvim_set_hl(0, "IblWhitespace", {link = "IndentLine"})
     vim.api.nvim_set_hl(0, "IblScope", theme.editor.indentScope)
     vim.api.nvim_set_hl(0, "DiagnosticError", theme.editor.error)
-    vim.api.nvim_set_hl(0, "DiagnosticWarn", theme.editor.warning)    
+    vim.api.nvim_set_hl(0, "DiagnosticWarn", theme.editor.warning)
     vim.api.nvim_set_hl(0, "Pmenu", theme.editor.menu)
     vim.api.nvim_set_hl(0, "Title", theme.editor.title)
     vim.api.nvim_set_hl(0, "Search", theme.editor.search)
@@ -129,9 +147,14 @@ function Apply(theme)
 
     --netrw
     vim.api.nvim_set_hl(0, "CursorLine", theme.netrw.cursorLine)
-    vim.api.nvim_set_hl(0, "netrwDir", theme.netrw.dir)
-    vim.api.nvim_set_hl(0, "netrwExe", theme.netrw.exe)
-    vim.api.nvim_set_hl(0, "netrwSymLink", theme.netrw.symlink)
+    vim.api.nvim_set_hl(0, "Directory", theme.netrw.dir)
+    vim.api.nvim_set_hl(0, "netrdDir", {link = "Directory"})
+    vim.api.nvim_set_hl(0, "Exe", theme.netrw.exe)
+    vim.api.nvim_set_hl(0, "netrwExe", {link = "Exe"})
+    vim.api.nvim_set_hl(0, "NvimTreeExecFile", {link = "Exe"})
+    vim.api.nvim_set_hl(0, "SymLink", theme.netrw.symlink)
+    vim.api.nvim_set_hl(0, "NvimTreeSymlink", {link = "SymLink"})
+    vim.api.nvim_set_hl(0, "netrwSymLink", {link = "SymLink"})
     vim.api.nvim_set_hl(0, "netrwVersion", theme.netrw.version)
     vim.api.nvim_set_hl(0, "netrwGray", theme.netrw.gray)
     vim.api.nvim_set_hl(0, "netrwComment", theme.netrw.comment)
@@ -139,6 +162,8 @@ function Apply(theme)
     vim.api.nvim_set_hl(0, "netrwDateSep", theme.netrw.date)
     vim.api.nvim_set_hl(0, "netrwTimeSep", theme.netrw.time)
     vim.api.nvim_set_hl(0, "DiffChange", theme.netrw.change)
+    vim.api.nvim_set_hl(0, "NvimTreeFolderIcon", theme.netrw.folder)
+    vim.api.nvim_set_hl(0, "NvimTreeImageFile", theme.netrw.image)
 
     --Keywords
     if(theme.keyword.method ~= nil) then
@@ -188,6 +213,71 @@ function Apply(theme)
     if(theme.keyword.definitions ~= nil) then
         vim.api.nvim_set_hl(0, "@keyword.type", theme.keyword.definitions)
     end
+
+    if(theme.keyword.variable ~= nil) then 
+        vim.api.nvim_set_hl(0, "Variable", theme.keyword.variable)
+        vim.api.nvim_set_hl(0, "@variable", {link = "Variable"})
+        vim.api.nvim_set_hl(0, "@lsp.type.variable", {link = "Variable"})
+
+        vim.api.nvim_set_hl(0, "Property", theme.keyword.variable);
+        vim.api.nvim_set_hl(0, "@property", {link = "Property"})
+        vim.api.nvim_set_hl(0, "@lsp.type.property", {link = "Property"})
+        --vim.api.nvim.set.hl(0, "@variable.member", {link = "Property"})
+    end
+    
+    if(theme.keyword.namespace ~= nil) then 
+        vim.api.nvim_set_hl(0, "Namespace", theme.keyword.namespace)
+        vim.api.nvim_set_hl(0, "@namespace", {link = "Namespace"})
+        vim.api.nvim_set_hl(0, "@lsp.type.namespace", {link = "Namespace"})
+    end
+    
+    if(theme.keyword.operator ~= nil) then 
+        vim.api.nvim_set_hl(0, "Operator", theme.keyword.operator)
+        vim.api.nvim_set_hl(0, "@operator", {link = "Operator"}) 
+    end
+
+    if(theme.keyword.functionoperator ~= nil) then 
+        vim.api.nvim_set_hl(0, "@keyword.operator", theme.keyword.functionoperator)
+    end
+
+    if(theme.keyword.property ~= nil) then
+        vim.api.nvim_set_hl(0, "Property", theme.keyword.property);
+        vim.api.nvim_set_hl(0, "@property", {link = "Property"})
+        vim.api.nvim_set_hl(0, "@lsp.type.property", {link = "Property"})
+        --vim.api.nvim.set.hl(0, "@variable.member", {link = "Property"})
+    end
+
+    if(theme.keyword.method ~= nil) then
+        vim.api.nvim_set_hl(0, "@keyword.function", theme.keyword.method);
+    end
+
+    if(theme.keyword.parameter ~= nil) then
+        vim.api.nvim_set_hl(0, "Parameter", theme.keyword.parameter)
+        vim.api.nvim_set_hl(0, "@parameter", {link = "Parameter"})
+        vim.api.nvim_set_hl(0, "@variable.parameter", {link = "Parameter"})
+         vim.api.nvim_set_hl(0, "@lsp.type.parameter", {link = "Parameter"})
+    end
+
+    if(theme.keyword.escapeChar ~= nil) then
+        vim.api.nvim_set_hl(0, "@string.escape", theme.keyword.escapeChar);
+    end
+
+    if(theme.keyword.macroMethod ~= nil) then
+        vim.api.nvim_set_hl(0, "@function.macro", theme.keyword.macroMethod);
+    end
+    
+    if(theme.keyword.functionCall ~= nil) then
+        vim.api.nvim_set_hl(0, "@function.call", theme.keyword.functionCall);
+    end
+
+    if(theme.keyword.regex ~= nil) then
+        vim.api.nvim_set_hl(0, "@string.regex", theme.keyword.regex);
+    end
+
+    if(theme.keyword.namespace ~= nil) then
+        vim.api.nvim_set_hl(0, "@lsp.type.namespace", theme.keyword.namespace);
+    end
+
 end
 
 return {
