@@ -75,7 +75,6 @@ function NewTheme()
     keyword.functionCall = nil;
     keyword.regex = nil;
     keyword.allocation = nil;
-    keyword.namespace = nil;
 
     config.base = base;
     config.editor = editor;
@@ -229,6 +228,7 @@ function Apply(theme)
         vim.api.nvim_set_hl(0, "Namespace", theme.keyword.namespace)
         vim.api.nvim_set_hl(0, "@namespace", {link = "Namespace"})
         vim.api.nvim_set_hl(0, "@lsp.type.namespace", {link = "Namespace"})
+        vim.api.nvim_set_hl(0, "@xmlNamespace", {link = "Namespace"})
     end
     
     if(theme.keyword.operator ~= nil) then 
@@ -273,11 +273,6 @@ function Apply(theme)
     if(theme.keyword.regex ~= nil) then
         vim.api.nvim_set_hl(0, "@string.regex", theme.keyword.regex);
     end
-
-    if(theme.keyword.namespace ~= nil) then
-        vim.api.nvim_set_hl(0, "@lsp.type.namespace", theme.keyword.namespace);
-    end
-
 end
 
 return {
